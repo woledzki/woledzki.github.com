@@ -1,2 +1,5 @@
+safe: true
 source: gen
-destination: page
+destination: build
+lsi: false
+pygments: true
