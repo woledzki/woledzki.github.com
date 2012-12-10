@@ -1,5 +1,5 @@
 safe: true
-source: gen
-destination: build
+source: ./gen
+destination: ./build
 lsi: false
 pygments: true
