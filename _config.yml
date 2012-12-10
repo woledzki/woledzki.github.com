@@ -1,1 +1,2 @@
-source: ./gen
+source: gen
+destination: page
