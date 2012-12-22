@@ -44,7 +44,7 @@ var app = window.app = {};
 	};
 
 	Page.prototype.hijackUrls = function() {
-		var allLinks = this.document.getElementsByClassName('tile');
+		var allLinks = this.document.getElementsByTagName('section');
 		for (var i = 0; i < allLinks.length; i++) {
 			if (allLinks[i].hasAttribute('data-href')) {
 				allLinks[i].onclick = function() {
