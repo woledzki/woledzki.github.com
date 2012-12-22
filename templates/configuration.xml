@@ -29,6 +29,10 @@
 		template="components/grid/content/templates/default.xsl"
 		folder="components/body/tile" 
 	/>
+	<component name="tile-post"
+		template="efault.xsl"
+		folder="components/body/tile-post" 
+	/>
 	<component name="paragraph"
 		template="components/modules/paragraph/templates/default.xsl"
 		folder="components/body/paragraph" 

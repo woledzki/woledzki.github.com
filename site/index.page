@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0"><data><title><![CDATA[]]></title></data><component name="header" id="2" parent-id="1"/><component name="body" id="3" parent-id="1">
+<component id="1" name="page" parent-id="0"><data><title><![CDATA[Wojtek Oledzki]]></title></data>
+	
+	<component name="body" id="3" parent-id="1">
 		<component id="4" name="content" parent-id="3"><data/><component name="tile" template="section" id="5" parent-id="4">
 				<data>
 					<size>tile-sml</size>
@@ -10,14 +12,13 @@
 </section>
 					]]></text>
 				</data>
-			</component><component name="tile" template="section" id="6" parent-id="4">
+			</component><component name="tile-post" id="6" parent-id="4">
 				<data>
-					<size>tile-mid tile-grey</size>
-					<href>test</href>
-					<background>isla-canela-tile.jpg</background>
+					<size>tile-mid</size>
+					<href>posts/wakacje-2011</href>
+					<image>isla-canela-tile.jpg</image>
 					<text><![CDATA[
-<h4>Wakacje 2011</h4>
-<p style="width: 50%">Wybraliśmy się z Sylwią do Isla Canela w Hiszpanii.
+<p><b>Wakacje 2011.</b> Wybraliśmy się z Sylwią do Isla Canela w Hiszpanii.
 </p>
 					]]></text>
 				</data>
@@ -33,6 +34,17 @@
 </ul>
 					]]></text>
 				</data>
-			</component><component id="8" name="tile" parent-id="4"><data><size><![CDATA[tile-sml]]></size><text><![CDATA[ser i salami]]></text></data></component><component id="9" name="tile" parent-id="4"><data><size><![CDATA[tile-sml]]></size><text><![CDATA[brukselskie_nudy]]></text></data></component><component name="tile" id="10" parent-id="4"/></component>
+			</component>
+			<component id="8" name="tile-post" parent-id="4">
+				<data>
+					<size><![CDATA[tile-mid]]></size>
+					<href>posts/brukselskie-nudy</href>
+					<text><![CDATA[
+						<p><b>Brukselskie Max Nudy</b> - Właśnie siedzę drugą godzine przy biurku i ...</p>
+					]]></text>
+					<image>brussels-panorama.jpg</image>
+				</data>
+			</component>
+			</component>
 		<component file="includes/side.page" id="11" parent-id="3"/>
 	</component></component>

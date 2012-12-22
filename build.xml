@@ -5,21 +5,23 @@
 
 	<!-- set default values if not already set in build.properties -->
 	<property name="dir.base" location="." />
+	<property name="dir.static" location="${dir.base}/public/static" />
+
+	<!-- Commands aliases -->
+	<property name="cmd.lessc" value="lessc" />
 
 	<target name="build.css"
 		description="Builds CSS file(s)."
 	>
-		<echo>Building ${dir.base}/public/static/styles/css/main.css</echo>
-		<concat destfile="${dir.base}/public/static/styles/css/main.css">
-			<fileset dir="${dir.base}/styles/css/"
-				includes="bootstrap.css"
-			/>
-			<fileset dir="${dir.base}/styles/css/"
-				includes="page.css"
-			/>
-		</concat>
+		<echo>Building ${dir.static}/styles/css/main.css</echo>
+		<exec executable="${cmd.lessc}" output="${dir.static}/styles/css/main.css">
+			<arg line="${dir.base}/styles/less/main.less" />
+		</exec>
 
-		<copy todir="${dir.base}/public/static/styles/gfx">
+		<copy todir="${dir.static}/styles/gfx">
+			<fileset dir="${dir.base}/styles/less/bootstrap-2.2/img">
+				<include name="**.png" />
+			</fileset>
 			<fileset dir="${dir.base}/styles/gfx">
 				<include name="**.png" />
 				<include name="**.gif" />

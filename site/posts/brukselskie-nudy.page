@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<component
+	id="1"
+	name="page"
+	parent-id="0">
+	<data>
+		<title><![CDATA[Wakacje 2011]]></title>
+	</data>
+	<component
+		id="3"
+		name="body"
+		parent-id="1">
+		<data />
+		<component
+			id="4"
+			name="content"
+			parent-id="3">
+			<data />
+			<component
+				id="5"
+				name="tile"
+				parent-id="4"
+				template="section">
+				<data>
+					<size><![CDATA[tile-lrg]]></size>
+					<text><![CDATA[
+<p>Właśnie siedzę drugą godzine przy biurku i nie było by w tym nic nadzwyczajnego gdyby nie fakt że robie absoltnie NIC. Laptopa nie zabrałem bo i tak dostepu do internetu nie ma (siedziba banku). Sudoku ani książki też nie wziąłem, bo myślałęm że niewypada – myliłem się. Absolutnie nikt nie zwraca na mnie uwagi. To jest jeden z tych momentow w ktorych zastanawiasz się „co ja tu cholera robie?”. Ale taki już urok korporacji. Ktoś powiedział że potrzeba specialisty, więc soecjalista przyjechał. Tylko jeszzce nikt nie wie po co.</p>
+					]]></text>
+					<text><![CDATA[
+<p>22 piętro biurowca „Manhatan”. Biurowca w którym nie ma nigdzie na 3 piętrach magicznej szafki/półki/stolika z długopisami, notesikami itd.</p>
+                                                        <p>Nie zostało mi nic innego jak tylko czytać dokumentację techniczą z akcją porywającą niczym ...</p>
+                                                        <p>Przyszło hasło i login, „koniec męczarni nareszcie” można by zacytować. Nic bardziej mylnego – konto zablokowane!!</p>
+                                                        <p>Nuuuuudy – mija właśnie trzecia godzina</p>
+					]]></text>
+				</data>
+			</component>
+		</component>
+		<component
+			file="includes/side.page"
+			id="6"
+			parent-id="3" />
+	</component>
+</component>

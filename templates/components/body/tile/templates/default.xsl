@@ -7,16 +7,12 @@
 
 	<xsl:template match="/component">
 		<div class="tile {data/size}">
-			<xsl:choose>
-				<xsl:when test="boolean(number(data/withsection))">
-					<section>
-						<xsl:apply-templates select="data/text" />
-					</section>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:apply-templates select="data/text" />
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:if test="data/href">
+				<xsl:attribute name="data-href">
+					<xsl:value-of select="data/href" />
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:apply-templates select="data/text" />
 		</div>
 	</xsl:template>
 

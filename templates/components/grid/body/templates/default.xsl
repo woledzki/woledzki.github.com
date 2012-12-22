@@ -8,6 +8,11 @@
 	<xsl:template match="/component">
 		<div class="container">
 			<div class="row">
+				<div class="span24">
+					<div class="page-header">
+						<h1 >Wojtek Olędzki</h1>
+					</div>
+				</div>
 				<xsl:value-of select="$H_SUB_COMPONENTS" disable-output-escaping="yes" />
 			</div>
 		</div>
