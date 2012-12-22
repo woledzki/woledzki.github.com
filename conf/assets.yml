@@ -1,0 +1,23 @@
+scripts:
+  main.js:
+    files:
+      - scripts/jquery.js
+      - scripts/jquery.ui.js
+      - scripts/hoborg.jenkins.js
+      - scripts/hoborg.dashboard.redmine.js
+      - scripts/hoborg.dashboard.dateTime.js
+    filters:
+      - uglifyjs
+
+styles:
+  css/main.css:
+    files:
+      - styles/css/bootstrap.css
+      - styles/css/page.css
+
+filters:
+  uglifyjs:
+    class: \Assetic\Filter\UglifyJsFilter
+    params:
+      - /usr/local/bin/uglifyjs
+      - /usr/local/bin/node

@@ -1,0 +1,10 @@
+
+/.project
+/.settings
+*.swp
+
+/conf/*.ini
+/conf/*/*.ini
+!*.default.yml
+!*.default.ini
+
