@@ -1,0 +1,37 @@
+<templates>
+
+	<external src="./../vendors/hoborglabs/components" />
+
+	<!-- LAYOUTS -->
+	<component name="page" template="default.xsl" folder="layouts/page" />
+	<component name="include" template="default.xsl" folder="layouts/include" />
+
+	<!-- GRID -->
+	<component name="header"
+		template="default.xsl"
+		folder="components/grid/header"
+	/>
+	<component name="body"
+		template="default.xsl"
+		folder="components/grid/body"
+	/>
+
+	<!-- BODY -->
+	<component name="content"
+		template="components/grid/header/templates/default.xsl" 
+		folder="components/body/content" 
+	/>
+	<component name="side"
+		template="components/grid/footer/templates/default.xsl" 
+		folder="components/body/side" 
+	/>
+	<component name="tile"
+		template="components/grid/content/templates/default.xsl"
+		folder="components/body/tile" 
+	/>
+	<component name="paragraph"
+		template="components/modules/paragraph/templates/default.xsl"
+		folder="components/body/paragraph" 
+	/>
+
+</templates>

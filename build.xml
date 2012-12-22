@@ -1,0 +1,49 @@
+<project name="Hoborg Commons" default="help" basedir=".">
+
+	<!-- optional environmental settings -->
+	<property file="build.properties" />
+
+	<!-- set default values if not already set in build.properties -->
+	<property name="dir.base" location="." />
+
+	<target name="build.css"
+		description="Builds CSS file(s)."
+	>
+		<echo>Building ${dir.base}/public/static/styles/css/main.css</echo>
+		<concat destfile="${dir.base}/public/static/styles/css/main.css">
+			<fileset dir="${dir.base}/styles/css/"
+				includes="bootstrap.css"
+			/>
+			<fileset dir="${dir.base}/styles/css/"
+				includes="page.css"
+			/>
+		</concat>
+
+		<copy todir="${dir.base}/public/static/styles/gfx">
+			<fileset dir="${dir.base}/styles/gfx">
+				<include name="**.png" />
+				<include name="**.gif" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.js"
+		description="Builds JS file(s)."
+	>
+		<echo>Building ${dir.base}/public/static/scripts/app.js</echo>
+		<concat destfile="${dir.base}/public/static/scripts/app.js">
+			<fileset dir="${dir.base}/scripts/">
+				<include name="page.js" />
+			</fileset>
+		</concat>
+	</target>
+
+	<!-- Help Message -->
+	<target name="help"
+		description="Prints this help"
+	>
+		<exec executable="ant">
+			<arg value="-p" />
+		</exec>
+	</target>
+</project>

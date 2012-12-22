@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0"><data><title><![CDATA[]]></title></data><component name="header" id="2" parent-id="1"/><component name="body" id="3" parent-id="1">
+		<component id="4" name="content" parent-id="3"><data/><component name="tile" template="section" id="5" parent-id="4">
+				<data>
+					<size>tile-sml</size>
+					<href>https://plus.google.com/photos/103706382130756305194/albums/5715798649142029985?authkey=CN-MlPPa9anJeQ</href>
+					<background>sketches.jpg</background>
+					<text><![CDATA[
+<h4>Moje Szkice</h4>
+</section>
+					]]></text>
+				</data>
+			</component><component name="tile" template="section" id="6" parent-id="4">
+				<data>
+					<size>tile-mid tile-grey</size>
+					<href>test</href>
+					<background>isla-canela-tile.jpg</background>
+					<text><![CDATA[
+<h4>Wakacje 2011</h4>
+<p style="width: 50%">Wybraliśmy się z Sylwią do Isla Canela w Hiszpanii.
+</p>
+					]]></text>
+				</data>
+			</component><component name="tile" template="section" id="7" parent-id="4">
+				<data>
+					<size>tile-sml tile-orange</size>
+					<text><![CDATA[
+<ul>
+	<li><a href="http://twitter.com/woledzki">Twitter</a></li>
+	<li><a href="http://instagram.com/woledzki">Instagram</a></li>
+	<li><a href="http://github.com/woledzki">github</a></li>
+	<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
+</ul>
+					]]></text>
+				</data>
+			</component><component id="8" name="tile" parent-id="4"><data><size><![CDATA[tile-sml]]></size><text><![CDATA[ser i salami]]></text></data></component><component id="9" name="tile" parent-id="4"><data><size><![CDATA[tile-sml]]></size><text><![CDATA[brukselskie_nudy]]></text></data></component><component name="tile" id="10" parent-id="4"/></component>
+		<component file="includes/side.page" id="11" parent-id="3"/>
+	</component></component>
