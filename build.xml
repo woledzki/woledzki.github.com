@@ -9,15 +9,42 @@
 
 	<!-- Commands aliases -->
 	<property name="cmd.lessc" value="lessc" />
+	<property name="cmd.recess" value="recess" />
 
-	<target name="build.css"
+	<target name="build"
+		description="Builds Website."
+		depends="build.css.compress, build.js"
+	>
+	</target>
+
+	<target name="build.css.compress"
+		depends="build.css.gfx"
 		description="Builds CSS file(s)."
 	>
 		<echo>Building ${dir.static}/styles/css/main.css</echo>
-		<exec executable="${cmd.lessc}" output="${dir.static}/styles/css/main.css">
+		<exec executable="${cmd.recess}" output="${dir.static}/styles/css/main.css">
+			<arg line="--compress" />
 			<arg line="${dir.base}/styles/less/main.less" />
 		</exec>
+	</target>
 
+	<target name="build.css.compile"
+		depends="build.css.gfx"
+		description="Builds CSS file(s)."
+	>
+		<echo>Building ${dir.static}/styles/css/main.css</echo>
+		<exec executable="${cmd.recess}" output="${dir.static}/styles/css/main.css">
+			<arg line="--compile" />
+			<arg line="--strictPropertyOrder" />
+			<arg line="--zeroUnits" />
+			<arg line="${dir.base}/styles/less/main.less" />
+		</exec>
+	</target>
+
+	<target name="build.css.gfx"
+		description="Copy css images assets"
+	>
+		<echo level="info">Copying CSS images assets.</echo>
 		<copy todir="${dir.static}/styles/gfx">
 			<fileset dir="${dir.base}/styles/less/bootstrap-2.2/img">
 				<include name="**.png" />

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0" template="post">
+	<data>
+		<date>2011-06-20</date>
+		<title><![CDATA[Wakacje 2011 - Isla Canela]]></title>
+		<slug href="/">Home</slug>
+		<slug href="/posts">Blog</slug>
+		<slug>Wakacje 2011</slug>
+	</data>
+	<component id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Hiszpania 2011
+
+Długo oczekiwany urlop w [Hiszpanii - Isla Canela](http://google.com/search?q=Isla+Canela&tbm=isch)!
+Nareszcie słońce i niebieskie niebo - przynajmniej na dwa tygodnie. 
+Miła odmiana od brytyjskich chmur, wiatru i deszczu.
+
+<img class="img-polaroid" width="590" src="/posts/hiszpania-2011-01.jpg" />
+
+Hiszpania przywitała nas niezbyt słoneczną pogodą. Razem z Sylwią 
+wypożyczyliśmy rowery i zwiedzaliśmy okoliczne wioski (wioskę - 
+liczba pojedyncza). Ale zdradzieckie słoneczko jednak grzało zza chmur
+i poparzyłem sobie nogi w sandałach :D
+
+Okolica bardzo ładna i dziewicza. Resorty wyrastają pośrodku niczego, 
+ale najwyraźniej cały biznes jest bardzo dochodowy, bo cała okolica 
+przygotowana jest bardzo nowocześnie. Deptaki i oświetlone drogi rowerowe 
+ciągną się wzdłuż plaży nawet w miejscach gdzie oprócz łąk i kaktusów 
+nic nie ma.
+			]]></markdown>
+		</data>
+	</component>
+</component>

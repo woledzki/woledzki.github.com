@@ -3,8 +3,8 @@
 /.settings
 *.swp
 
-/conf/*.ini
-/conf/*/*.ini
+/_display-service/conf/*.ini
+/_display-service/conf/*/*.ini
 !*.default.yml
 !*.default.ini
 

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0">
+	<data><title><![CDATA[Wojtek Oledzki]]></title></data>
+	
+	<component name="body" id="3" parent-id="1">
+		<data>
+			<slug href="/">Home</slug>
+			<slug href="/posts">Blog</slug>
+		</data>
+		<component id="4" name="content" parent-id="3">
+			<data/>
+			<component id="4" name="posts-index" parent-id="4">
+				<data>
+					<folder>posts</folder>
+				</data>
+			</component>
+		</component>
+		<component file="includes/side.page" id="11" parent-id="3"/>
+	</component>
+</component>
