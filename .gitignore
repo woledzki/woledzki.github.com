@@ -3,6 +3,7 @@
 /.settings
 *.swp
 
+/_display-service/public/static
 /_display-service/conf/*.ini
 /_display-service/conf/*/*.ini
 !*.default.yml
