@@ -13,7 +13,7 @@
 	<!-- Commands aliases -->
 	<property name="cmd.lessc" value="lessc" />
 	<property name="cmd.recess" value="recess" />
-	<property name="cmd.ds-console" value="" />
+	<property name="cmd.ds-console" value="console.php" />
 
 	<target name="build"
 		description="Builds Website."
@@ -27,6 +27,7 @@
 				<include name="**/*" />
 				<exclude name="_display-service/" />
 				<exclude name="build.xml" />
+				<exclude name="build.properties" />
 			</fileset>
 		</copy>
 	</target>
@@ -84,10 +85,10 @@
 	
 	<target name="build.html">
 		<exec executable="php">
-			<arg line="/Users/oledzkiw/Workspace/hoborg-DisplayServiceBundle/bin/console.php" />
+			<arg line="${cmd.ds-console}" />
 			<arg line="ds:generate" />
 			<arg line="--source='/'" />
-			<arg line="--output='/Users/oledzkiw/Workspace/wojtek.oledzki.info'" />
+			<arg line="--output='${dir.base}'" />
 		</exec>
 	</target>
 

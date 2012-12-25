@@ -2,6 +2,7 @@
 /.project
 /.settings
 *.swp
+*.properties
 
 /_display-service/public/static
 /_display-service/conf/*.ini
