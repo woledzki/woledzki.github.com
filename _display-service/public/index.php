@@ -4,7 +4,7 @@ defined('H_DS_ENV') ||
 	define('H_DS_ENV', 'prod');
 
 // main include
-$vendorsRoot = __DIR__ . '/../../vendors';
+$vendorsRoot = __DIR__ . '/../../../vendors';
 require_once $vendorsRoot. '/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;

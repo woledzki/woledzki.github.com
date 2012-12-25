@@ -5,26 +5,41 @@
 
 	<!-- set default values if not already set in build.properties -->
 	<property name="dir.base" location="." />
-	<property name="dir.static" location="${dir.base}/public/static" />
+	<property name="dir.src" location="${dir.base}/_display-service" />
+	
+	<property name="dir.src.public" location="${dir.src}/public" />
+	<property name="dir.out.static" location="${dir.base}/static" />
 
 	<!-- Commands aliases -->
 	<property name="cmd.lessc" value="lessc" />
 	<property name="cmd.recess" value="recess" />
+	<property name="cmd.ds-console" value="" />
 
 	<target name="build"
 		description="Builds Website."
-		depends="build.css.compress, build.js"
+		depends="build.css.compress, build.js, build.html, deploy"
 	>
+	</target>
+	
+	<target name="deploy">
+		<copy todir="/Users/oledzkiw/Workspace/woledzki.github.com">
+			<fileset dir="${dir.base}">
+				<include name="**/*" />
+				<exclude name="_display-service/" />
+				<exclude name="build.xml" />
+			</fileset>
+		</copy>
 	</target>
 
 	<target name="build.css.compress"
 		depends="build.css.gfx"
 		description="Builds CSS file(s)."
 	>
-		<echo>Building ${dir.static}/styles/css/main.css</echo>
-		<exec executable="${cmd.recess}" output="${dir.static}/styles/css/main.css">
+		<echo level="info">Building ${dir.out.static}/styles/css/main.css</echo>
+		<mkdir dir="${dir.out.static}/styles/css" />
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/main.css">
 			<arg line="--compress" />
-			<arg line="${dir.base}/styles/less/main.less" />
+			<arg line="${dir.src}/styles/less/main.less" />
 		</exec>
 	</target>
 
@@ -32,12 +47,12 @@
 		depends="build.css.gfx"
 		description="Builds CSS file(s)."
 	>
-		<echo>Building ${dir.static}/styles/css/main.css</echo>
-		<exec executable="${cmd.recess}" output="${dir.static}/styles/css/main.css">
+		<echo level="info">Building ${dir.out.static}/styles/css/main.css</echo>
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/main.css">
 			<arg line="--compile" />
 			<arg line="--strictPropertyOrder" />
 			<arg line="--zeroUnits" />
-			<arg line="${dir.base}/styles/less/main.less" />
+			<arg line="${dir.src}/styles/less/main.less" />
 		</exec>
 	</target>
 
@@ -45,11 +60,11 @@
 		description="Copy css images assets"
 	>
 		<echo level="info">Copying CSS images assets.</echo>
-		<copy todir="${dir.static}/styles/gfx">
-			<fileset dir="${dir.base}/styles/less/bootstrap-2.2/img">
+		<copy todir="${dir.out.static}/styles/gfx">
+			<fileset dir="${dir.src}/styles/less/bootstrap-2.2/img">
 				<include name="**.png" />
 			</fileset>
-			<fileset dir="${dir.base}/styles/gfx">
+			<fileset dir="${dir.src}/styles/gfx">
 				<include name="**.png" />
 				<include name="**.gif" />
 			</fileset>
@@ -59,12 +74,21 @@
 	<target name="build.js"
 		description="Builds JS file(s)."
 	>
-		<echo>Building ${dir.base}/public/static/scripts/app.js</echo>
-		<concat destfile="${dir.base}/public/static/scripts/app.js">
-			<fileset dir="${dir.base}/scripts/">
+		<echo>Building ${dir.out.static}/scripts/app.js</echo>
+		<concat destfile="${dir.out.static}/scripts/app.js">
+			<fileset dir="${dir.src}/scripts/">
 				<include name="page.js" />
 			</fileset>
 		</concat>
+	</target>
+	
+	<target name="build.html">
+		<exec executable="php">
+			<arg line="/Users/oledzkiw/Workspace/hoborg-DisplayServiceBundle/bin/console.php" />
+			<arg line="ds:generate" />
+			<arg line="--source='/'" />
+			<arg line="--output='/Users/oledzkiw/Workspace/wojtek.oledzki.info'" />
+		</exec>
 	</target>
 
 	<!-- Help Message -->

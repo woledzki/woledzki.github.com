@@ -1,10 +1,14 @@
 <templates>
 
-	<external src="./../vendors/hoborglabs/components" />
-
 	<!-- LAYOUTS -->
-	<component name="page" template="default.xsl" folder="layouts/page" />
-	<component name="include" template="default.xsl" folder="layouts/include" />
+	<component name="page"
+		template="default.xsl"
+		folder="layouts/page"
+	/>
+	<component name="include"
+		template="default.xsl"
+		folder="layouts/include"
+	/>
 
 	<!-- GRID -->
 	<component name="header"
@@ -18,28 +22,29 @@
 
 	<!-- BODY -->
 	<component name="content"
-		template="components/grid/header/templates/default.xsl" 
-		folder="components/body/content" 
+		template="default.xsl"
+		folder="components/body/content"
 	/>
 	<component name="side"
-		template="components/grid/footer/templates/default.xsl" 
-		folder="components/body/side" 
+		template="default.xsl"
+		folder="components/body/side"
 	/>
+
 	<component name="tile"
-		template="components/grid/content/templates/default.xsl"
-		folder="components/body/tile" 
+		template="default.xsl"
+		folder="components/body/tile"
 	/>
 	<component name="tile-post"
-		template="efault.xsl"
-		folder="components/body/tile-post" 
+		template="default.xsl"
+		folder="components/body/tile-post"
 	/>
 	<component name="posts-index"
-		template="efault.xsl"
-		folder="components/body/posts-index" 
+		template="default.xsl"
+		folder="components/body/posts-index"
 	/>
-	
+
 	<component name="paragraph"
-		template="components/modules/paragraph/templates/default.xsl"
+		template="default.xsl"
 		folder="components/body/paragraph" 
 	/>
 
