@@ -1,5 +1,5 @@
 exclude:
  - build.xml
  - build.properties
- - _display-service/
- - includes/
+ - _display-service
+ - includes
