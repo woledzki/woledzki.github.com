@@ -17,19 +17,8 @@
 
 	<target name="build"
 		description="Builds Website."
-		depends="build.css.compress, build.js, build.html, deploy"
+		depends="build.css.compress, build.js, build.html"
 	>
-	</target>
-	
-	<target name="deploy">
-		<copy todir="/Users/oledzkiw/Workspace/woledzki.github.com">
-			<fileset dir="${dir.base}">
-				<include name="**/*" />
-				<exclude name="_display-service/" />
-				<exclude name="build.xml" />
-				<exclude name="build.properties" />
-			</fileset>
-		</copy>
 	</target>
 
 	<target name="build.css.compress"
