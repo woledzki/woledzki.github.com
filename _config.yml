@@ -1,5 +1,0 @@
-include:
-  - test
-exclude:
-  - posts
-baseurl: /test
