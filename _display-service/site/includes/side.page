@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page name="include">
+	<component name="side">
+		<component name="paragraph">
+			<data>
+				<text><![CDATA[
+<p>Cześć, nazywam się Wojtek i lubię fotografię, dobrą
+muzyke, jedzenenie i marnować czas przed PS3 czy telewizorem.</p>
+<p>
+Zawodowo jestem inżynierem wydajności oprogramowania w BSkyB w Wielkiej
+Brytani.
+</p>
+					]]></text>
+				<text><![CDATA[
+<p>Ta strona jest hostowana zupełnie za darmo na 
+<a href="http://pages.github.com">pages.github.com</a>. I wygenerowana
+przez <a href="http://code.hoborglabs.com/displayservicebundle">Display Service</a>
+</p>
+					]]></text>
+			</data>
+		</component>
+	</component>
+</page>

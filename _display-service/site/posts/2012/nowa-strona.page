@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0" template="post">
+	<data>
+		<date>2012-12-22</date>
+		<title><![CDATA[Nowa Strona]]></title>
+
+		<slug href="/">Home</slug>
+		<slug href="/posts">Blog</slug>
+		<slug href="/posts/2012">2012</slug>
+		<slug>Nowa Strona</slug>
+	</data>
+	<component id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown>
+## Nowa Strona
+
+Jest coś takiego w człowieku, że lubi tworzyć nowe żeczy. Chyba tylko
+dlatego, bo wydaje mu się że tym razem będzie lepiej, szybciej, fajniej.  
+Tym razem jest troche lepiej i troche szybciej. Cała strona jest 
+**hostowana zupełnie za darmo** na [github pages](http://pages.github.com).
+Wygenerowana jest używając darmowego [Display Service](http://hoborglabs.com/en/projects).
+Wszystko jest łatwe proste i przyjemne.
+
+Źródełka strony możesz podejżeć w publicznym repozytorium [github](http://github.com/woledzki/woledzki.github.com).
+Nie ma żadnych cudów, bajerów i wodotrysków.
+
+Nie był bym sobą gdyby strona nie była super-szybka. Jeden zminimalizowany
+plik CSS. Jeden zminimalizowany plik JS. Statyczne strony HTML. Już dużo
+szybciej być nie może.  
+Jest oczywiście miejsce na kilka ulepszeń, między innymi lepsza obsługa telefonów
+i tabletów.
+
+			</markdown>
+		</data>
+	</component>
+</component>

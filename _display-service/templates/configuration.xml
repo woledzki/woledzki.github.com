@@ -1,0 +1,51 @@
+<templates>
+
+	<!-- LAYOUTS -->
+	<component name="page"
+		template="default.xsl"
+		folder="layouts/page"
+	/>
+	<component name="include"
+		template="default.xsl"
+		folder="layouts/include"
+	/>
+
+	<!-- GRID -->
+	<component name="header"
+		template="default.xsl"
+		folder="components/grid/header"
+	/>
+	<component name="body"
+		template="default.xsl"
+		folder="components/grid/body"
+	/>
+
+	<!-- BODY -->
+	<component name="content"
+		template="default.xsl"
+		folder="components/body/content"
+	/>
+	<component name="side"
+		template="default.xsl"
+		folder="components/body/side"
+	/>
+
+	<component name="tile"
+		template="default.xsl"
+		folder="components/body/tile"
+	/>
+	<component name="tile-post"
+		template="default.xsl"
+		folder="components/body/tile-post"
+	/>
+	<component name="posts-index"
+		template="default.xsl"
+		folder="components/body/posts-index"
+	/>
+
+	<component name="paragraph"
+		template="default.xsl"
+		folder="components/body/paragraph" 
+	/>
+
+</templates>

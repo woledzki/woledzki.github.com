@@ -1,0 +1,92 @@
+<project name="Hoborg Commons" default="help" basedir=".">
+
+	<!-- optional environmental settings -->
+	<property file="build.properties" />
+
+	<!-- set default values if not already set in build.properties -->
+	<property name="dir.base" location="." />
+	<property name="dir.src" location="${dir.base}/_display-service" />
+	
+	<property name="dir.src.public" location="${dir.src}/public" />
+	<property name="dir.out.static" location="${dir.base}/static" />
+
+	<!-- Commands aliases -->
+	<property name="cmd.lessc" value="lessc" />
+	<property name="cmd.recess" value="recess" />
+	<property name="cmd.ds-console" value="console.php" />
+
+	<target name="build"
+		description="Builds Website."
+		depends="build.css.compress, build.js, build.html"
+	>
+	</target>
+
+	<target name="build.css.compress"
+		depends="build.css.gfx"
+		description="Builds CSS file(s)."
+	>
+		<echo level="info">Building ${dir.out.static}/styles/css/main.css</echo>
+		<mkdir dir="${dir.out.static}/styles/css" />
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/main.css">
+			<arg line="--compress" />
+			<arg line="${dir.src}/styles/less/main.less" />
+		</exec>
+	</target>
+
+	<target name="build.css.compile"
+		depends="build.css.gfx"
+		description="Builds CSS file(s)."
+	>
+		<echo level="info">Building ${dir.out.static}/styles/css/main.css</echo>
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/main.css">
+			<arg line="--compile" />
+			<arg line="--strictPropertyOrder" />
+			<arg line="--zeroUnits" />
+			<arg line="${dir.src}/styles/less/main.less" />
+		</exec>
+	</target>
+
+	<target name="build.css.gfx"
+		description="Copy css images assets"
+	>
+		<echo level="info">Copying CSS images assets.</echo>
+		<copy todir="${dir.out.static}/styles/gfx">
+			<fileset dir="${dir.src}/styles/less/bootstrap-2.2/img">
+				<include name="**.png" />
+			</fileset>
+			<fileset dir="${dir.src}/styles/gfx">
+				<include name="**.png" />
+				<include name="**.gif" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.js"
+		description="Builds JS file(s)."
+	>
+		<echo>Building ${dir.out.static}/scripts/app.js</echo>
+		<concat destfile="${dir.out.static}/scripts/app.js">
+			<fileset dir="${dir.src}/scripts/">
+				<include name="page.js" />
+			</fileset>
+		</concat>
+	</target>
+	
+	<target name="build.html">
+		<exec executable="php">
+			<arg line="${cmd.ds-console}" />
+			<arg line="ds:generate" />
+			<arg line="--source='/'" />
+			<arg line="--output='${dir.base}'" />
+		</exec>
+	</target>
+
+	<!-- Help Message -->
+	<target name="help"
+		description="Prints this help"
+	>
+		<exec executable="ant">
+			<arg value="-p" />
+		</exec>
+	</target>
+</project>

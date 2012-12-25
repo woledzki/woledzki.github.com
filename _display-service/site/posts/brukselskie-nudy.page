@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0" template="post">
+	<data>
+		<date>2010-05-20</date>
+		<title><![CDATA[Brukselskie Max Nudy]]></title>
+
+		<slug href="/">Home</slug>
+		<slug href="/posts">Blog</slug>
+		<slug>Brukselskie Nudy</slug>
+	</data>
+	<component id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown>
+## Brukselskie Nudy
+
+Właśnie siedzę drugą godzine przy biurku i nie było by w tym nic 
+nadzwyczajnego gdyby nie fakt że robie absoltnie NIC. Laptopa nie 
+zabrałem bo i tak dostepu do internetu nie ma (siedziba banku).
+Sudoku ani książki też nie wziąłem, bo myślałęm że niewypada – 
+myliłem się. Absolutnie nikt nie zwraca na mnie uwagi. To jest jeden z
+tych momentow w ktorych zastanawiasz się „co ja tu cholera robie?”.
+Ale taki już urok korporacji. Ktoś powiedział że potrzeba specialisty,
+więc soecjalista przyjechał. Tylko jeszzce nikt nie wie po co.
+
+22 piętro biurowca „Manhatan”. Biurowca w którym nie ma nigdzie na 3
+piętrach magicznej szafki/półki/stolika z długopisami, notesikami itd.
+
+Nie zostało mi nic innego jak tylko czytać dokumentację techniczą z akcją porywającą niczym ...
+
+Przyszło hasło i login, „koniec męczarni nareszcie” można by zacytować. Nic bardziej mylnego – konto zablokowane!!
+
+Nuuuuudy – mija właśnie trzecia godzina
+			</markdown>
+		</data>
+	</component>
+</component>
