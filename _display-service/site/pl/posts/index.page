@@ -4,15 +4,14 @@
 	
 	<component name="body" id="3" parent-id="1">
 		<data>
-			<slug href="/">Home</slug>
-			<slug href="/posts">Blog</slug>
-			<slug href="/posts/2012">2012</slug>
+			<slug href="/pl">Home</slug>
+			<slug href="/pl/posts">Blog</slug>
 		</data>
 		<component id="4" name="content" parent-id="3">
 			<data/>
 			<component id="4" name="posts-index" parent-id="4">
 				<data>
-					<folder>posts/2012</folder>
+					<folder>pl/posts</folder>
 				</data>
 			</component>
 		</component>

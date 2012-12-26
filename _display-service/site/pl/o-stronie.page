@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0" template="post">
+	<data>
+		<date>2010-05-20</date>
+		<title><![CDATA[Brukselskie Max Nudy]]></title>
+
+		<slug href="/pl">Home</slug>
+		<slug>O Stronie</slug>
+	</data>
+	<component id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown>
+## Słów Parę o Stronie
+
+Stronę uruchomiłem ponownie z jednej prostej przyczyny - potrzebuję testować
+Display Service. Potrzebuje też prostego i wygodnego sposobó publikowania.
+Jak na razie wszystko działa.
+
+### Jak To Zrobić za Darmo?
+			</markdown>
+			<text><![CDATA[
+<div class="media">
+	<img class="media-object pull-left" width="60" src="/images/hoborglabs-logo.png" />
+	<p class="media-body">
+		<b><a href="http://code.hoborglabs.com/displayservicebundle">Display Service</a></b>
+		to darmowy renderer HTML. Możesz używać go na swoim serwerze
+		lub do generacji statycznych stron HTML.
+	</p>
+</div>
+<div class="media">
+	<img class="media-object pull-left" width="60" src="/images/github-logo.jpg" />
+	<p class="media-body">
+		<b><a href="http://pages.github.com/">Github Pages</a></b> to najprostrzy i
+		najszybszy sposób na hostowanie swojej strony.
+	</p>
+</div>
+<div class="media">
+	<img class="media-object pull-left" width="60" src="/images/bootstrap-logo.png" />
+	<p class="media-body">
+		<b><a href="http://twitter.github.com/bootstrap/index.html">Bootstrap CSS</a></b>
+		dostarczy ci podstawowych componenntów CSS dla twojej strony.
+	</p>
+</div>
+			]]></text>
+		</data>
+	</component>
+</component>

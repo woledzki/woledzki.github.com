@@ -71,15 +71,9 @@
 							</div>
 						</div>
 						<div class="span-side">
-							<p>Cześć, nazywam się Wojtek i Zawodowo jestem inżynierem wydajności
-								oprogramowania w BSkyB w Wielkiej Brytani. Lubię fotografię, dobrą
-								muzyke, jedzenenie i marnować czas przed PS3 czy telewizorem.
-							</p>
-
-							<p>Ta strona jest hostowana zupełnie za darmo na
-								<a href="http://pages.github.com">pages.github.com</a> i wygenerowana
-								przez
-								<a href="http://code.hoborglabs.com/displayservicebundle">Display Service</a>.
+							<p>Cześć, nazywam się Wojtek i zawodowo jestem inżynierem wydajności
+								oprogramowania w BSkyB w Wielkiej Brytani. Lubię fotografię, dobre
+								jedzenenie, muzykę i marnować czas przed PS3 czy telewizorem.
 							</p>
 						</div>
 					</div>

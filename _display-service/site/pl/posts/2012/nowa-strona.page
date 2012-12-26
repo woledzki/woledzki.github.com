@@ -4,9 +4,9 @@
 		<date>2012-12-22</date>
 		<title><![CDATA[Nowa Strona]]></title>
 
-		<slug href="/">Home</slug>
-		<slug href="/posts">Blog</slug>
-		<slug href="/posts/2012">2012</slug>
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/posts">Blog</slug>
+		<slug href="/pl/posts/2012">2012</slug>
 		<slug>Nowa Strona</slug>
 	</data>
 	<component id="5" name="paragraph" parent-id="4">

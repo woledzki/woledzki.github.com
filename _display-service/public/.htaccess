@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteRule static\/(.*)$ /assets.php/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !\.(js|ico|gif|jpg|png|css)$ /index.php

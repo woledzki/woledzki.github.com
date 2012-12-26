@@ -19,6 +19,12 @@
 		template="default.xsl"
 		folder="components/grid/body"
 	/>
+	
+	<!-- Overtake -->
+	<component name="language-picker"
+		template="default.xsl"
+		folder="components/body/language-picker"
+	/>
 
 	<!-- BODY -->
 	<component name="content"

@@ -17,8 +17,17 @@
 
 	<target name="build"
 		description="Builds Website."
-		depends="build.css.compress, build.js, build.html"
+		depends="clean,build.css.compress, build.js, build.html"
 	>
+	</target>
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="${dir.base}">
+				<include name="**/*.html" />
+				<exclude name="_display-service/**/*" />
+			</fileset>
+		</delete>
 	</target>
 
 	<target name="build.css.compress"

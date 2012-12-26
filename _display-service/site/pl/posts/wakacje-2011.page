@@ -3,8 +3,8 @@
 	<data>
 		<date>2011-06-20</date>
 		<title><![CDATA[Wakacje 2011 - Isla Canela]]></title>
-		<slug href="/">Home</slug>
-		<slug href="/posts">Blog</slug>
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/posts">Blog</slug>
 		<slug>Wakacje 2011</slug>
 	</data>
 	<component id="5" name="paragraph" parent-id="4">

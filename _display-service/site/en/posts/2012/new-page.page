@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0" template="post">
+	<data>
+		<date>2012-12-22</date>
+		<title><![CDATA[New Shiny Website]]></title>
+
+		<slug href="/en">Home</slug>
+		<slug href="/en/posts">Blog</slug>
+		<slug href="/en/posts/2012">2012</slug>
+		<slug>New Shiny Website</slug>
+	</data>
+	<component id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown>
+## New Shiny Website
+
+
+			</markdown>
+		</data>
+	</component>
+</component>

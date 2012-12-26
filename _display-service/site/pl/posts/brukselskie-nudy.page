@@ -4,8 +4,8 @@
 		<date>2010-05-20</date>
 		<title><![CDATA[Brukselskie Max Nudy]]></title>
 
-		<slug href="/">Home</slug>
-		<slug href="/posts">Blog</slug>
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/posts">Blog</slug>
 		<slug>Brukselskie Nudy</slug>
 	</data>
 	<component id="5" name="paragraph" parent-id="4">

@@ -34,6 +34,14 @@
 			</head>
 			<body>
 				<xsl:value-of select="$H_SUB_COMPONENTS" disable-output-escaping="yes" />
+				<div class="container">
+					<div class="page-footer">
+						copyright 2012 - Wojtek Olędzki.
+						<span class="pull-right">
+							<a href="/pl/o-stronie">O Stronie</a>
+						</span>
+					</div>
+				</div>
 				<script src="{$H_BASE_PATH}/static/scripts/app.js" type="text/javascript"></script>
 			</body>
 		</html>
