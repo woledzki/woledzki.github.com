@@ -54,4 +54,9 @@
 		folder="components/body/paragraph" 
 	/>
 
+	<component name="google-analytics"
+		template="default.xsl"
+		folder="components/google/analytics"
+	/>
+
 </templates>

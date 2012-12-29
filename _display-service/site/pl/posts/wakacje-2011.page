@@ -31,4 +31,10 @@ nic nie ma.
 			]]></markdown>
 		</data>
 	</component>
+	<component name="google-analytics">
+		<data>
+			<account>UA-37323022-1</account>
+			<enabled>1</enabled>
+		</data>
+	</component>
 </component>
