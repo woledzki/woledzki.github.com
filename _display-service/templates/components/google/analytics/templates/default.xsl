@@ -10,7 +10,9 @@
 			<script type="text/javascript">
 				var _gaq = _gaq || [];
 				_gaq.push(["_setAccount", "<xsl:value-of select="data/account" />"]);
-				_gaq.push(['_setDomainName', 'bhp-raciborz.pl']);
+				<xsl:if test="data/domain">
+					_gaq.push(["_setDomainName", "<xsl:value-of select="data/domain" />"]);
+				</xsl:if>
 				_gaq.push(["_trackPageview"]);
 
 				(function() {

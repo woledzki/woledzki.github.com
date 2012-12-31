@@ -15,11 +15,9 @@ class Component extends \Hoborg\Bundle\DisplayServiceBundle\Component\Component 
 			return parent::render();
 		}
 
-		if (!defined('H_DS_ENV')) {
-			define('H_DS_ENV', 'dev');
-		}
+		$env = $this->provider->getEnvironement();
 
-		if ('dev' == H_DS_ENV || 'test' == H_DS_ENV) {
+		if ('dev' == $env || 'test' == $env) {
 			$enabled = $enabled->item(0);
 			$enabled->nodeValue = 0;
 		}
