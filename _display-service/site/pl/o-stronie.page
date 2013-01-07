@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0" template="post">
-	<data>
-		<date>2010-05-20</date>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
 		<title><![CDATA[Brukselskie Max Nudy]]></title>
-
+	</data>
+	<data extension="data-body">
 		<slug href="/pl">Home</slug>
 		<slug>O Stronie</slug>
 	</data>
-	<component id="5" name="paragraph" parent-id="4">
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
 		<data>
 			<markdown>
 ## Słów Parę o Stronie
@@ -42,12 +43,6 @@ Jak na razie wszystko działa.
 	</p>
 </div>
 			]]></text>
-		</data>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
 		</data>
 	</component>
 </component>

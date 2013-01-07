@@ -19,7 +19,11 @@
 		template="default.xsl"
 		folder="components/grid/body"
 	/>
-	
+	<component name="footer"
+		template="default.xsl"
+		folder="components/grid/footer"
+	/>
+
 	<!-- Overtake -->
 	<component name="language-picker"
 		template="default.xsl"

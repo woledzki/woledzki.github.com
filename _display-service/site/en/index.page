@@ -1,31 +1,33 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0"><data><title><![CDATA[Wojtek Oledzki]]></title></data>
-	
-	<component name="body" id="3" parent-id="1">
-		<component id="4" name="content" parent-id="3"><data/><component name="tile" template="section" id="5" parent-id="4">
-				<data>
-					<size>tile-sml</size>
-					<href>https://plus.google.com/photos/103706382130756305194/albums/5715798649142029985?authkey=CN-MlPPa9anJeQ</href>
-					<background>sketches.jpg</background>
-					<text><![CDATA[
+<component file="includes/page-en.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[Wojtek Oledzki]]></title>
+	</data>
+
+	<component extension="body" name="tile" template="section" id="5" parent-id="4">
+		<data>
+			<size>tile-sml</size>
+			<href>https://plus.google.com/photos/103706382130756305194/albums/5715798649142029985?authkey=CN-MlPPa9anJeQ</href>
+			<background>sketches.jpg</background>
+			<text><![CDATA[
 <h4>My Sketches</h4>
-					]]></text>
-				</data>
-			</component>
-			<component id="8" name="tile-post" parent-id="4">
-				<data>
-					<size><![CDATA[tile-mid]]></size>
-					<href>/en/posts/2012/new-page</href>
-					<text><![CDATA[
-						<p><b>Shiny New Page</b> ...</p>
-					]]></text>
-					<image>posts/nowa-strona.jpg</image>
-				</data>
-			</component>
-			<component name="tile" template="section" id="7" parent-id="4">
-				<data>
-					<size>tile-sml tile-orange</size>
-					<text><![CDATA[
+			]]></text>
+		</data>
+	</component>
+	<component extension="body" id="8" name="tile-post" parent-id="4">
+		<data>
+			<size><![CDATA[tile-mid]]></size>
+			<href>/en/posts/2012/new-page</href>
+			<text><![CDATA[
+				<p><b>Shiny New Page</b> ...</p>
+			]]></text>
+			<image>posts/nowa-strona.jpg</image>
+		</data>
+	</component>
+	<component extension="body" name="tile" template="section" id="7" parent-id="4">
+		<data>
+			<size>tile-sml tile-orange</size>
+			<text><![CDATA[
 <ul>
 	<li><a href="http://twitter.com/woledzki">Twitter</a></li>
 	<li><a href="http://instagram.com/woledzki">Instagram</a></li>
@@ -33,25 +35,16 @@
 	<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
 </ul>
 					]]></text>
-				</data>
-			</component>
-			<component name="tile-post" id="6" parent-id="4">
-				<data>
-					<size>tile-mid</size>
-					<href>/en/posts/holidays-2011</href>
-					<image>isla-canela-tile.jpg</image>
-					<text><![CDATA[
+		</data>
+	</component>
+	<component extension="body" name="tile-post" id="6" parent-id="4">
+		<data>
+			<size>tile-mid</size>
+			<href>/en/posts/holidays-2011</href>
+			<image>isla-canela-tile.jpg</image>
+			<text><![CDATA[
 <p><b>Holidays 2011.</b> We took a trip to Isla Canela in Spain.</p>
 					]]></text>
-				</data>
-			</component>
-			</component>
-		<component file="includes/side.page" id="11" parent-id="3"/>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
 		</data>
 	</component>
 </component>

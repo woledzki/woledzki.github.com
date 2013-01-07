@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<component id="1" name="page" parent-id="0">
+	<data>
+		<extension name="data-page" />
+	</data>
+	
+	<component name="body" id="3" parent-id="1">
+		<data>
+			<extension name="data-body" />
+		</data>
+		<component id="4" name="content" parent-id="3">
+			<data/>
+			<extension name="body" />
+		</component>
+		<component name="side">
+			<component name="paragraph">
+				<data>
+					<text><![CDATA[
+<div class="media">
+<img class="pull-right media-object img-polaroid" src="/images/wojtek.jpg" width="80" />
+<p class="media-body">
+	Cześć, nazywam się Wojtek i zawodowo jestem <b>inżynierem wydajności
+	oprogramowania</b> w BSkyB w Wielkiej Brytani. Lubię fotografię, dobre
+	jedzenenie, muzykę i marnować czas przed PS3 czy telewizorem.
+</p>
+</div>
+						]]></text>
+				</data>
+			</component>
+		</component>
+	</component>
+	<component name="footer">
+		<data>
+			<link href="/pl/o-stronie">O Stronie</link>
+		</data>
+	</component>
+	<component name="google-analytics">
+		<data>
+			<account>UA-37323022-1</account>
+			<enabled>1</enabled>
+		</data>
+	</component>
+</component>

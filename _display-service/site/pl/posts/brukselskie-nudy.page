@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0" template="post">
-	<data>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
 		<date>2010-05-20</date>
 		<title><![CDATA[Brukselskie Max Nudy]]></title>
-
+	</data>
+	<data extension="data-body">
 		<slug href="/pl">Home</slug>
 		<slug href="/pl/posts">Blog</slug>
 		<slug>Brukselskie Nudy</slug>
 	</data>
-	<component id="5" name="paragraph" parent-id="4">
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
 		<data>
 			<markdown>
 ## Brukselskie Nudy
@@ -31,12 +33,6 @@ Przyszło hasło i login, „koniec męczarni nareszcie” można by zacytować.
 
 Nuuuuudy – mija właśnie trzecia godzina
 			</markdown>
-		</data>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
 		</data>
 	</component>
 </component>

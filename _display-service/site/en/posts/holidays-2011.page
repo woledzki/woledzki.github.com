@@ -1,27 +1,24 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0" template="post">
-	<data>
+<component file="includes/page-en.page" parent-id="0">
+	<data extension="data-page">
 		<date>2011-06-20</date>
 		<title><![CDATA[Holidays 2011 - Isla Canela]]></title>
+	</data>
+	<data extension="data-body">
 		<slug href="/en">Home</slug>
 		<slug href="/en/posts">Blog</slug>
 		<slug>Holidays 2011</slug>
 	</data>
-	<component id="5" name="paragraph" parent-id="4">
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
 		<data>
 			<markdown><![CDATA[
 ## Spain 2011
 
-[Spain - Isla Canela](http://google.com/search?q=Isla+Canela&tbm=isch)
+Finally, two weeks at [Spain - Isla Canela](http://google.com/search?q=Isla+Canela&tbm=isch)
 
 <img class="img-polaroid" width="590" src="/posts/hiszpania-2011-01.jpg" />
 			]]></markdown>
-		</data>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
 		</data>
 	</component>
 </component>

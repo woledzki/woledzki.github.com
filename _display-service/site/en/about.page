@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<component file="includes/page-en.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[About This Page]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/en">Home</slug>
+		<slug>About</slug>
+	</data>
+
+	<component id="5" extension="body" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## About This Page.
+
+This page is a blasting site for my projects and ideas.
+
+
+### Build with Display Service.
+
+Display Service is a free, simple to use Symfony2 bundle for generating html files using
+XML as data source and XSLTs as templates.  
+You can use it for generating static HTML pages, or simply generating your pages on the fly.
+
+
+### Hosted For Free on Githyb Pages.
+
+Github is awesome, we all know that. It now got event better. You can host your website
+or your project website for free on **github pages**.
+			]]></markdown>
+		</data>
+	</component>
+</component>

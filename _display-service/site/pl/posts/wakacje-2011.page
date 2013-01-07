@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0" template="post">
-	<data>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
 		<date>2011-06-20</date>
 		<title><![CDATA[Wakacje 2011 - Isla Canela]]></title>
+	</data>
+	<data extension="data-body">
 		<slug href="/pl">Home</slug>
 		<slug href="/pl/posts">Blog</slug>
 		<slug>Wakacje 2011</slug>
 	</data>
-	<component id="5" name="paragraph" parent-id="4">
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
 		<data>
 			<markdown><![CDATA[
 ## Hiszpania 2011
@@ -29,12 +32,6 @@ przygotowana jest bardzo nowocześnie. Deptaki i oświetlone drogi rowerowe
 ciągną się wzdłuż plaży nawet w miejscach gdzie oprócz łąk i kaktusów 
 nic nie ma.
 			]]></markdown>
-		</data>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
 		</data>
 	</component>
 </component>

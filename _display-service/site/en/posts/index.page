@@ -1,26 +1,16 @@
 <?xml version="1.0"?>
-<component id="1" name="page" parent-id="0">
-	<data><title><![CDATA[Wojtek Oledzki]]></title></data>
-	
-	<component name="body" id="3" parent-id="1">
+<component file="includes/page-en.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[Wojtek Olędzki - Blog]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/en">Home</slug>
+		<slug href="/en/posts">Blog</slug>
+	</data>
+
+	<component extension="body" id="4" name="posts-index" parent-id="4">
 		<data>
-			<slug href="/en">Home</slug>
-			<slug href="/en/posts">Blog</slug>
-		</data>
-		<component id="4" name="content" parent-id="3">
-			<data/>
-			<component id="4" name="posts-index" parent-id="4">
-				<data>
-					<folder>en/posts</folder>
-				</data>
-			</component>
-		</component>
-		<component file="includes/side.page" id="11" parent-id="3"/>
-	</component>
-	<component name="google-analytics">
-		<data>
-			<account>UA-37323022-1</account>
-			<enabled>1</enabled>
+			<folder>en/posts</folder>
 		</data>
 	</component>
 </component>
