@@ -19,13 +19,13 @@ class Paragraph extends Component {
 							. '/' . $component->getAttribute('file');
 					$md = file_get_contents($mdFile);
 				} else {
-					$md = $component->nodeValue ;
+					$md = $component->nodeValue;
 				}
 				$html = Markdown($md);
 
 				$textNode = $this->data->importNode(
 						new DOMElement('text', $html), true);
-				$this->data->documentElement->appendChild($textNode);
+				$component->parentNode->replaceChild($textNode, $component);
 			}
 		}
 		unset($component);
