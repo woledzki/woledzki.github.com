@@ -9,6 +9,10 @@
 		<slug href="/pl/przepisy">Przepisy</slug>
 		<slug>Krewetki w Białym Sosie</slug>
 	</data>
+	<data extension="data-content">
+		<tag>gluten-free</tag>
+		<tag>makaron</tag>
+	</data>
 
 	<component extension="body" id="5" name="paragraph" parent-id="4">
 		<data>
@@ -25,7 +29,7 @@ Porcja dla dwóch osób:
 * Philadelphia Light with Garlic & Herbs
 * Sainsbury's Taste the Difference Cooked & Peeled Jumbo King Prawns (225g)
 * Cebula lub Szalotka
-* Kostka Knorra.
+* Knorr the Chicken Cube.
 * Natka Pietruszki.
 * Białe wino.
 * Masło lub Oliwa.
@@ -40,9 +44,8 @@ ani oliwy). Teraz pora na krojenie cebulki niezapominając o mieszaniu
 krewetek od czasu do czasu.
 
 Gdy cebulka jest juz skrojona, woda w czajniku pewnie już się 
-zagotowała. Do dużego kubka lub małego garnuszka wrzucamy kostkę Knora
-i zalewamy 0.5l wrzątku. Mieszamy bulion do czasu rozpuszczenia się
-kostki.
+zagotowała. Do dużego kubka wrzucamy kostkę Knora i zalewamy 0.5l
+wrzątku. Mieszamy bulion do czasu rozpuszczenia się kostki.
 
 Krewetki się już pewnie rozmroziły. Zgarniamy je w jeden koniec patelni
 a no wolną część wrzucamy cebulkę.  

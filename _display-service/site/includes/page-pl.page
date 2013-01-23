@@ -9,7 +9,9 @@
 			<extension name="data-body" />
 		</data>
 		<component id="4" name="content" parent-id="3">
-			<data/>
+			<data>
+				<extension name="data-content" />
+			</data>
 			<extension name="body" />
 		</component>
 		<component name="side">
