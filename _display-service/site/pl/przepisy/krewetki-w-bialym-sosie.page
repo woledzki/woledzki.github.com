@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<date>2013-01-23</date>
+		<title><![CDATA[Krewetki w Białym Sosie ]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/przepisy">Przepisy</slug>
+		<slug>Krewetki w Białym Sosie</slug>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Krewetki w Białym Sosie
+
+
+
+### Składniki
+
+Porcja dla dwóch osób:
+
+* Makaron
+* Philadelphia Light with Garlic & Herbs
+* Sainsbury's Taste the Difference Cooked & Peeled Jumbo King Prawns (225g)
+* Cebula lub Szalotka
+* Kostka Knorra.
+* Natka Pietruszki.
+* Białe wino.
+* Masło lub Oliwa.
+
+
+
+### Przygotowanie
+
+Zaczynamy od wstawienia wody na makaron i 0.5l wody w czajniku.
+Następnie na dużą patelnie wrzucamy mrożone krewetki (nie dodajmy masła
+ani oliwy). Teraz pora na krojenie cebulki niezapominając o mieszaniu
+krewetek od czasu do czasu.
+
+Gdy cebulka jest juz skrojona, woda w czajniku pewnie już się 
+zagotowała. Do dużego kubka lub małego garnuszka wrzucamy kostkę Knora
+i zalewamy 0.5l wrzątku. Mieszamy bulion do czasu rozpuszczenia się
+kostki.
+
+Krewetki się już pewnie rozmroziły. Zgarniamy je w jeden koniec patelni
+a no wolną część wrzucamy cebulkę.  
+Nie zapomnij o makaronie - woda już pewnie szaleje pod przykrywką.  
+Gdy cebulka ladnie juz się zeszkliła, dodajemy serek i mieszamy go z 
+cebulą. Gdy cały już się roztopi, mieszamy wszystko razem z krewetki.
+
+Pora na bulion, winko i przyprawy. Dolewamy powoli bulion i wino 
+porcjami, mieszając i  !! kosztując !! Teraz wszystko zależy od Ciebie.
+Jeżeli znalazłeś już ten odpowiedni smak, posiekaj pietruszke i odkryj
+smak od nowa.
+
+
+
+### Jak Podawać
+
+Mozesz zacząć od obsypania talerza swieżo startym parmezanem. Nałóż
+niewielką porcję makaronu na środek talerza przykrywając go obfitą 
+porcją krewetek i sosu. Wykończ wszystko małą natką pietruszki
+			]]></markdown>
+		</data>
+	</component>
+</component>
