@@ -8,6 +8,7 @@
 	<xsl:template match="/component">
 		<ul class="unstyled posts-list">
 			<xsl:apply-templates select="data/post" />
+			<xsl:apply-templates select="data/tag" />
 		</ul>
 	</xsl:template>
 	
@@ -16,6 +17,13 @@
 			<span class="post-date"><xsl:value-of select="./@date" /></span>
 			<h3><a href="{@href}"><xsl:value-of select="." /></a></h3>
 		</li>
+	</xsl:template>
+	
+	<xsl:template match="tag">
+		<h4><xsl:value-of select="./@name" /></h4>
+		<ul class="unstyled posts-list">
+			<xsl:apply-templates select="./post" />
+		</ul>
 	</xsl:template>
 
 </xsl:stylesheet>

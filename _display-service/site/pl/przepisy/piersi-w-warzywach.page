@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<date>2013-01-23</date>
+		<title><![CDATA[Piersi w Warzywach]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/przepisy">Przepisy</slug>
+		<slug>Krewetki w Białym Sosie</slug>
+	</data>
+	<data extension="data-content">
+		<tag>Gluten Free</tag>
+		<tag>Kurczak</tag>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Piersi w Warzywach
+
+<< obrazek >>
+
+### Składniki
+
+Porcja dla dwóch osób:
+
+* Dwie piersi z kurczaka
+* 2 duże marchewki
+* 2 duże pietruszki (korzeń)
+* Maslo.
+* Przyprawy.
+* Folia aluminiowa.
+
+
+
+### Przygotowanie
+
+
+
+### Jak Podawać
+
+
+			]]></markdown>
+		</data>
+	</component>
+</component>
