@@ -15,14 +15,15 @@
 			]]></text>
 		</data>
 	</component>
-	<component extension="body" id="8" name="tile-post" parent-id="4">
+	<component extension="body" name="tile-post" id="6" parent-id="4">
 		<data>
-			<size><![CDATA[tile-mid]]></size>
-			<href>/pl/posts/2012/nowa-strona</href>
+			<size>tile-mid</size>
+			<href>/pl/przepisy</href>
+			<image>images/recipes.jpg</image>
 			<text><![CDATA[
-				<p><b>Nowa Strona</b> ...</p>
+<p><b>Przepisy Kulinarne.</b> Kto by pomyślał że komuś się to przyda :)
+</p>
 			]]></text>
-			<image>posts/nowa-strona.jpg</image>
 		</data>
 	</component>
 	<component extension="body" name="tile" template="section" id="7" parent-id="4">
@@ -36,6 +37,16 @@
 	<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
 </ul>
 			]]></text>
+		</data>
+	</component>
+	<component extension="body" id="8" name="tile-post" parent-id="4">
+		<data>
+			<size><![CDATA[tile-mid]]></size>
+			<href>/pl/posts/2012/nowa-strona</href>
+			<text><![CDATA[
+				<p><b>Nowa Strona</b> ...</p>
+			]]></text>
+			<image>posts/nowa-strona.jpg</image>
 		</data>
 	</component>
 	<component extension="body" name="tile-post" id="6" parent-id="4">
