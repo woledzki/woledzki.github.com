@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<date>2013-01-23</date>
+		<title><![CDATA[Sałatk z Awokado]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/przepisy">Przepisy</slug>
+		<slug>Krewetki w Białym Sosie</slug>
+	</data>
+	<data extension="data-content">
+		<tag>30min</tag>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Sałatka z Awokado
+
+Szybka, zdrowa i lekka sałatka na każdą okazje
+<img src="/images/pl/przepisy/salatka-z-awokado.jpg" class="img-polaroid" />
+
+
+
+### Składniki
+
+* Mieszanka liści (Italian Style Baby Leaf Salad)
+* Awokado
+* Oliwa
+* Pomidory koktajlowe
+* Orzechy włoskie
+
+
+
+### Przygotowanie
+
+Rozcinamy awokado dookoła pestki, japiemy pewnie i przekrecamy. Jeżeli
+wszystko się udało masz teraz w każdej rence 1/2 awokad. Jeżeli ci się
+nie udało, no cóż ... następnym razem będzie lepiej :)
+
+Kroimy awokado w duza kostke lub plastry, kroimy pomidorki na połówki 
+lub ćwiartki w zależności jak duże są pomidory i ostrożnie kruszymy w
+rękach orzechy na duze kawałki.  
+Rozkładamy liście na talerzu, obsypujemy pomidorami, awokado i
+orzechami. Całość lekko solimy i pieprzymy - Nie mieszamy sałatki!.
+Polewamy wszysko oliwą i gotowe.
+
+**Extra:** Możesz spróbować dodać paski ogórka zielonego, oliwiki,
+kostki serka feta.
+
+
+
+### Jak Podawać
+
+Podajemy prosto na stół - smacznego.
+
+			]]></markdown>
+		</data>
+	</component>
+</component>
