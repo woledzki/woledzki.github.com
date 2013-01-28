@@ -8,7 +8,12 @@
 		<slug href="/pl/przepisy">Przepisy</slug>
 	</data>
 
-	<component extension="body" id="4" name="posts-index" parent-id="4">
+	<component extension="body" id="4" name="posts-index" parent-id="4" template="small">
+		<data>
+			<folder>pl/przepisy</folder>
+		</data>
+	</component>
+	<component extension="body" id="4" name="posts-index" parent-id="4" template="small">
 		<data>
 			<folder type="tags">pl/przepisy</folder>
 		</data>

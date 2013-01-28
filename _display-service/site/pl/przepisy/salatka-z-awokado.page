@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <component file="includes/page-pl.page" parent-id="0">
 	<data extension="data-page">
-		<date>2013-01-23</date>
+		<date>2013-01-28</date>
 		<title><![CDATA[Sałatk z Awokado]]></title>
 	</data>
 	<data extension="data-body">
