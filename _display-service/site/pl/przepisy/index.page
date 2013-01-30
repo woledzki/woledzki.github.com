@@ -13,6 +13,13 @@
 			<folder>pl/przepisy</folder>
 		</data>
 	</component>
+	<component extension="body" id="4" name="paragraph" parent-id="4" >
+		<data>
+			<markdown><![CDATA[
+<h3>Kategorie</h3>
+			]]></markdown>
+		</data>
+	</component>
 	<component extension="body" id="4" name="posts-index" parent-id="4" template="small">
 		<data>
 			<folder type="tags">pl/przepisy</folder>

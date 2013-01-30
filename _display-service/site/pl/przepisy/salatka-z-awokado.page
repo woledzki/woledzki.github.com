@@ -11,6 +11,7 @@
 	</data>
 	<data extension="data-content">
 		<tag>30min</tag>
+		<tag>Gluten Free</tag>
 	</data>
 
 	<component extension="body" id="5" name="paragraph" parent-id="4">
@@ -18,14 +19,15 @@
 			<markdown><![CDATA[
 ## Sałatka z Awokado
 
-Szybka, zdrowa i lekka sałatka na każdą okazje
-<img src="/images/pl/przepisy/salatka-z-awokado.jpg" class="img-polaroid" />
+Szybka, zdrowa i lekka sałatka na każdą okazję.
+<img src="/images/pl/przepisy/salatka-awokado.jpg" class="img-polaroid" />
 
 
 
 ### Składniki
 
-* Mieszanka liści (Italian Style Baby Leaf Salad)
+* Mieszanka sałat (Italian Style Peppery Salad 100g). Koniecznie liście
+  rukoli i szpinaku.
 * Awokado
 * Oliwa
 * Pomidory koktajlowe
@@ -35,18 +37,20 @@ Szybka, zdrowa i lekka sałatka na każdą okazje
 
 ### Przygotowanie
 
-Rozcinamy awokado dookoła pestki, japiemy pewnie i przekrecamy. Jeżeli
+<img src="/images/pl/przepisy/awokado.jpg" class="img-polaroid pull-right" />
+
+Rozcinamy awokado dookoła pestki, łapiemy pewnie i przekrecamy. Jeżeli
 wszystko się udało masz teraz w każdej rence 1/2 awokad. Jeżeli ci się
 nie udało, no cóż ... następnym razem będzie lepiej :)
 
-Kroimy awokado w duza kostke lub plastry, kroimy pomidorki na połówki 
-lub ćwiartki w zależności jak duże są pomidory i ostrożnie kruszymy w
+Kroimy awokado w dużą kostke lub plastry, kroimy pomidorki na połówki 
+lub ćwiartki w zależności od tego jakie są duże i ostrożnie kruszymy w
 rękach orzechy na duze kawałki.  
 Rozkładamy liście na talerzu, obsypujemy pomidorami, awokado i
-orzechami. Całość lekko solimy i pieprzymy - Nie mieszamy sałatki!.
-Polewamy wszysko oliwą i gotowe.
+orzechami. Całość lekko solimy i pieprzymy - Nie mieszamy sałatki!
+Polewamy wszystko oliwą i gotowe.
 
-**Extra:** Możesz spróbować dodać paski ogórka zielonego, oliwiki,
+**Extra:** Możesz spróbować dodać paski zielonego ogórka, oliwki,
 kostki serka feta.
 
 
