@@ -63,4 +63,9 @@
 		folder="components/google/analytics"
 	/>
 
+	<component name="facebook-comments"
+		template="default.xsl"
+		folder="components/facebook/comments"
+	/>
+
 </templates>
