@@ -31,6 +31,7 @@
 				<link rel="stylesheet" type="text/css" media="all" 
 					href="{$H_BASE_PATH}/static/styles/css/main.css"
 				/>
+				<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 			</head>
 			<body>
 				<xsl:value-of select="$H_SUB_COMPONENTS" disable-output-escaping="yes" />
