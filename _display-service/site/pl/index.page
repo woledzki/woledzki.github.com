@@ -3,7 +3,7 @@
 	<data extension="data-page">
 		<title><![CDATA[Wojtek Olędzki]]></title>
 	</data>
-	
+
 	<component extension="body" name="tile" template="section" id="5" parent-id="4">
 		<data>
 			<size>tile-sml</size>
