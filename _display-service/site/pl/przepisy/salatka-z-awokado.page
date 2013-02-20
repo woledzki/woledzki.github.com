@@ -65,7 +65,7 @@ Podajemy prosto na stół - smacznego.
 
 	<component extension="body" id="5" name="facebook-comments" parent-id="4">
 		<data>
-			<url>http://wojtek.it/pl/przepisy/salatka-z-awokado</url>
+			<url>http://wojtek.it{{ url }}</url>
 		</data>
 	</component>
 </component>

@@ -42,4 +42,9 @@ z nadzieniem krewetkowym
 			]]></markdown>
 		</data>
 	</component>
+	<component extension="body" id="5" name="facebook-comments" parent-id="4">
+		<data>
+			<url>http://wojtek.it{{ url }}</url>
+		</data>
+	</component>
 </component>

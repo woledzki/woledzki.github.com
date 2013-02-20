@@ -69,4 +69,9 @@ wcześniej nalaliśmy ok 2cm wody.
 			]]></markdown>
 		</data>
 	</component>
+	<component extension="body" id="5" name="facebook-comments" parent-id="4">
+		<data>
+			<url>http://wojtek.it{{ url }}</url>
+		</data>
+	</component>
 </component>

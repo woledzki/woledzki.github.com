@@ -22,6 +22,7 @@
 	</target>
 	
 	<target name="clean">
+		<echo level="info">Deleting generated *.html files</echo>
 		<delete>
 			<fileset dir="${dir.base}">
 				<include name="**/*.html" />
