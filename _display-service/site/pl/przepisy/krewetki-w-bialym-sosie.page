@@ -3,6 +3,8 @@
 	<data extension="data-page">
 		<date>2013-01-23</date>
 		<title><![CDATA[Krewetki w Białym Sosie ]]></title>
+		<keywords>Wojtek Olędzki, przepisy, krewetki</keywords>
+		<description>Przepis na szybki obiad z krewetkami, możesz go podać na stół w 30 minut.</description>
 	</data>
 	<data extension="data-body">
 		<slug href="/pl">Home</slug>

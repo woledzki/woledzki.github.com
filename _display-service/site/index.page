@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
 <component id="1" name="page" parent-id="0">
-	<data><title><![CDATA[Wojtek Oledzki]]></title></data>
-	
+	<data>
+		<title><![CDATA[Wojtek Oledzki]]></title>
+		<keywords>Wojtek Olędzki, Blog, Przepisy</keywords>
+		<description></description>
+	</data>
+
 	<component name="body" id="3" parent-id="1">
 		<component id="4" name="language-picker" parent-id="3">
-			<data>
-			</data>
+			<data></data>
 		</component>
 	</component>
 	<component name="google-analytics">

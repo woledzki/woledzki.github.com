@@ -2,6 +2,8 @@
 <component file="includes/page-pl.page" parent-id="0">
 	<data extension="data-page">
 		<title><![CDATA[Brukselskie Max Nudy]]></title>
+		<keywords>Wojtek Olędzki, pages.github.com, hoborglabs, DisplayService</keywords>
+		<description>Jak za darmo hostować stonę internetową?</description>
 	</data>
 	<data extension="data-body">
 		<slug href="/pl">Home</slug>

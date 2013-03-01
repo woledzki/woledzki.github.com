@@ -13,17 +13,13 @@
 />
 	
 	<xsl:template match="/component">
-		<!--
-		<xsl:variable name="head">
-			<xsl:value-of disable-output-escaping="yes" select="php:function('get_head')" />
-		</xsl:variable>
-		-->
 		<html>
 			<head>
 				<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 				<title><xsl:value-of select="data/title" /></title>
-				<meta name="keywords" content="" />
-				<meta name="description" content="" />
+
+				<meta name="keywords" content="{data/keywords}" />
+				<meta name="description" content="{data/description}" />
 
 				<link rel="shortcut icon" href="{$H_BASE_PATH}/favicon.ico" type="image/x-icon" />
 				<link rel="icon" href="{$H_BASE_PATH}/favicon.ico" type="image/x-icon" />
