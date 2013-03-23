@@ -27,6 +27,7 @@
 			<fileset dir="${dir.base}">
 				<include name="**/*.html" />
 				<exclude name="_display-service/**/*" />
+				<exclude name="deadline.html" />
 			</fileset>
 		</delete>
 	</target>
@@ -41,6 +42,11 @@
 			<arg line="--compress" />
 			<arg line="${dir.src}/styles/less/main.less" />
 		</exec>
+		
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/deadline.css">
+			<arg line="--compress" />
+			<arg line="${dir.src}/styles/less/deadline.less" />
+		</exec>
 	</target>
 
 	<target name="build.css.compile"
@@ -53,6 +59,13 @@
 			<arg line="--strictPropertyOrder" />
 			<arg line="--zeroUnits" />
 			<arg line="${dir.src}/styles/less/main.less" />
+		</exec>
+		
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/deadline.css">
+			<arg line="--compile" />
+			<arg line="--strictPropertyOrder" />
+			<arg line="--zeroUnits" />
+			<arg line="${dir.src}/styles/less/deadline.less" />
 		</exec>
 	</target>
 

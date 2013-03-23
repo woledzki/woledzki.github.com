@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:php="http://php.net/xsl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Wojtek Olędzki</title>
+	<meta name="keywords" content="Wojtek Olędzki, Blog, Przepisy">
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" media="all" href="/static/styles/css/deadline.css">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+</head>
+<body style="background: #000">
+	<div class="box">
+		<h2 class="gameover">GAME OVER</h2>
+		<div class="images">
+			<img src="/images/deadline-grim.png" class="img-grim" />
+			<img src="/images/deadline-guy.png" class="img-guy" />
+		</div>
+		<div class="bar">
+			<div class="bar-deadline"></div>
+		</div>
+		<h2 class="deadline">dead<span style="color: #FFF;">line&hellip;</span></h2>
+	</div>
+	
+	<script>
+		var pl = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+			query  = window.location.search.substring(1);
+		urlParams = {
+			from: 0,
+			to: 0
+		};
+		while (match = search.exec(query))
+			urlParams[decode(match[1])] = decode(match[2]);
+
+		console.log(urlParams);
+
+		var now = new Date().getTime() / 1000;
+		var p = 0;
+		if (now > urlParams.from && now < urlParams.to) {
+			p = 100 * (now - urlParams.from)/(urlParams.to - urlParams.from)
+		} else if (now > urlParams.to) {
+			p = 100;
+		}
+
+		move(p);
+
+		function move(progress) {
+			if (progress > 100) {
+				progress = 100;
+			}
+
+			// elements
+			var barEl = document.getElementsByClassName('bar-deadline')[0];
+			var imgEl = document.getElementsByClassName('img-grim')[0];
+			var gameoverEl = document.getElementsByClassName('gameover')[0];
+
+			barEl.style.width = progress + "%";
+			imgEl.style.opacity = progress/50;
+			gameoverEl.style['text-shadow'] = "0px 36px " + (100-progress) +"px #bc0013"
+
+			if (progress > 75) {
+				pr = 95 * (progress-75) / 25;
+				imgEl.style['margin-left'] = -38 - pr + "px";
+			} else {
+				imgEl.style['margin-left'] = -38 + "px";
+			}
+
+			imgEl.style.left = progress + "%";
+		}
+	</script>
+</body>
+</html>
