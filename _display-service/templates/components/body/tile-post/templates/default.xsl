@@ -15,7 +15,7 @@
 				</xsl:if>
 				<xsl:if test="data/image">
 					<xsl:attribute name="style">
-						min-height: 50px; padding-top: 90px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />) no-repeat top center
+						min-height: 30px; padding-top: 90px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />) no-repeat top center
 					</xsl:attribute>
 				</xsl:if>
 				<div class="caption">

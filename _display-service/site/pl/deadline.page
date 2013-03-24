@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[Brukselskie Max Nudy]]></title>
+		<keywords>Wojtek Olędzki, pages.github.com, hoborglabs, DisplayService</keywords>
+		<description>Jak za darmo hostować stonę internetową?</description>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug>Deadline</slug>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Deadline Widget
+
+Zainspirowany pewnym obrazkiem postanowiłem na szybko zrobić prostą strone
+
+			]]></markdown>
+			<text><![CDATA[
+<div>
+	<h4>Początek Projektu</h4>
+	<div class="input-prepend input-append">
+		<span class="add-on">Rok: </span>
+		<input id="fromYear" class="span2" type="text" size="4">
+		<span class="add-on">Miesiąc: </span>
+		<input id="fromMonth" class="span2" type="text" size="2">
+		<span class="add-on">Dzień: </span>
+		<input id="fromDay" class="span2" type="text" size="2">
+	</div>
+</div>
+
+<div>
+	<h4>Koniec Projektu:</h4>
+	<div class="input-prepend input-append">
+		<span class="add-on">Rok: </span>
+		<input id="toYear" class="span2" type="text" size="4">
+		<span class="add-on">Miesiąc: </span>
+		<input id="toMonth" class="span2" type="text" size="2">
+		<span class="add-on">Dzień: </span>
+		<input id="toDay" class="span2" type="text" size="2">
+	</div>
+</div>
+
+<br />
+<a id="generate">Wygeneruj Link</a>
+<div class="input-prepend input-append">
+	<span class="add-on">link:</span>
+	<input id="link" class="span12" type="text" size="4">
+</div>
+
+<script>
+	var genLink = document.getElementById("generate"),
+		outLink = document.getElementById("link"),
+		fromYearEl = document.getElementById("fromYear"),
+		fromMonthEl = document.getElementById("fromMonth"),
+		fromDayEl = document.getElementById("fromDay"),
+		toYearEl = document.getElementById("toYear"),
+		toMonthEl = document.getElementById("toMonth"),
+		toDayEl = document.getElementById("toDay"),
+		from = new Date(),
+		to = new Date();
+
+	from.setHours(0);
+	from.setMinutes(0);
+	from.setSeconds(0);
+	to.setHours(23);
+	to.setMinutes(59);
+	to.setSeconds(59);
+
+	genLink.onclick = function() {
+		from.setFullYear(fromYearEl.value);
+		from.setMonth(fromMonthEl.value - 1);
+		from.setDate(fromDayEl.value);
+
+		to.setFullYear(toYearEl.value);
+		to.setMonth(toMonthEl.value - 1);
+		to.setDate(toDayEl.value);
+
+		outLink.value = "http://wojtek.it/deadline?from=" + (Math.round(from.getTime()/1000))
+				+ "&to=" + Math.round(to.getTime()/1000);
+	}
+</script>
+			]]></text>
+		</data>
+	</component>
+</component>

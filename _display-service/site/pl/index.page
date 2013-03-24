@@ -22,11 +22,10 @@
 		<component name="tile-post" id="6" parent-id="4">
 			<data>
 				<size>tile-mid</size>
-				<href>/pl/przepisy</href>
-				<image>images/recipes.jpg</image>
+				<href>/pl/deadline</href>
+				<image>images/deadline.png</image>
 				<text><![CDATA[
-	<p><b>Przepisy Kulinarne.</b> Kto by pomyślał że komuś się to przyda :)
-	</p>
+	<p><b>Deadline</b> widget - try it yourself</p>
 				]]></text>
 			</data>
 		</component>
@@ -41,6 +40,17 @@
 		<li><a href="http://github.com/woledzki">github</a></li>
 		<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
 	</ul>
+				]]></text>
+			</data>
+		</component>
+		<component name="tile-post" id="6" parent-id="4">
+			<data>
+				<size>tile-mid</size>
+				<href>/pl/przepisy</href>
+				<image>images/recipes.jpg</image>
+				<text><![CDATA[
+	<p><b>Przepisy Kulinarne.</b> Kto by pomyślał że komuś się to przyda :)
+	</p>
 				]]></text>
 			</data>
 		</component>

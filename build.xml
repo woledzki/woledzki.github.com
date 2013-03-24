@@ -60,7 +60,8 @@
 			<arg line="--zeroUnits" />
 			<arg line="${dir.src}/styles/less/main.less" />
 		</exec>
-		
+
+	<echo level="info">Building ${dir.out.static}/styles/css/deadline.css</echo>
 		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/deadline.css">
 			<arg line="--compile" />
 			<arg line="--strictPropertyOrder" />
