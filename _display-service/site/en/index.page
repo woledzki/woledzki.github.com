@@ -15,16 +15,18 @@
 				]]></text>
 			</data>
 		</component>
-		<component id="8" name="tile-post" parent-id="4">
+		
+		<component name="tile-post" id="6" parent-id="4">
 			<data>
-				<size><![CDATA[tile-mid]]></size>
-				<href>/en/posts/2012/new-page</href>
+				<size>tile-mid</size>
+				<href>/en/deadline</href>
+				<image>images/deadline.png</image>
 				<text><![CDATA[
-					<p><b>Shiny New Page</b> ...</p>
+	<p><b>Deadline</b> widget - try it yourself</p>
 				]]></text>
-				<image>posts/nowa-strona.jpg</image>
 			</data>
 		</component>
+	
 		<component name="tile" template="section" id="7" parent-id="4">
 			<data>
 				<size>tile-sml</size>
@@ -37,6 +39,16 @@
 		<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
 	</ul>
 						]]></text>
+			</data>
+		</component>
+		<component id="8" name="tile-post" parent-id="4">
+			<data>
+				<size><![CDATA[tile-mid]]></size>
+				<href>/en/posts/2012/new-page</href>
+				<text><![CDATA[
+					<p><b>Shiny New Page</b> ...</p>
+				]]></text>
+				<image>posts/nowa-strona.jpg</image>
 			</data>
 		</component>
 		<component name="tile-post" id="6" parent-id="4">

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:php="http://php.net/xsl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Brukselskie Max Nudy</title>
+<meta name="keywords" content="Wojtek Olędzki, pages.github.com, hoborglabs, DisplayService">
+<meta name="description" content="Jak za darmo hostować stonę internetową?">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="all" href="/static/styles/css/main.css">
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+</head>
+<body><div xmlns:php="http://php.net/xsl" class="grid-body">
+<div class="page-header">
+<h1>Wojtek Olędzki</h1>
+<ul class="breadcrumb">
+<li>
+<a href="/en">Home</a><span class="divider">/</span>
+</li>
+<li class="active">Deadline</li>
+</ul>
+</div><div xmlns:php="http://php.net/xsl" class="content"><h2>Deadline Widget</h2>
+
+<p>Inspired by <a href="http://media-cache-ec2.pinterest.com/550x/38/52/ff/3852ff07c97aa6061c642afdeea9cd96.jpg">funny pic</a> I&apos;ve decided to make a simple page for visualizing your
+project deadline.</p>
+
+<div>
+	<h4>Project Start Date</h4>
+	<div class="input-prepend input-append">
+		<span class="add-on">Year: </span>
+		<input id="fromYear" class="span2" type="text" size="4">
+		<span class="add-on">Month: </span>
+		<input id="fromMonth" class="span2" type="text" size="2">
+		<span class="add-on">Day: </span>
+		<input id="fromDay" class="span2" type="text" size="2">
+	</div>
+</div>
+
+<div>
+	<h4>Project End Date:</h4>
+	<div class="input-prepend input-append">
+		<span class="add-on">Year: </span>
+		<input id="toYear" class="span2" type="text" size="4">
+		<span class="add-on">Month: </span>
+		<input id="toMonth" class="span2" type="text" size="2">
+		<span class="add-on">Day: </span>
+		<input id="toDay" class="span2" type="text" size="2">
+	</div>
+</div>
+
+<br />
+<a id="generate">Generate a link</a>
+<div class="input-prepend input-append">
+	<span class="add-on">link:</span>
+	<input id="link" class="span12" type="text" size="4">
+</div>
+
+<script>
+	var genLink = document.getElementById("generate"),
+		outLink = document.getElementById("link"),
+		fromYearEl = document.getElementById("fromYear"),
+		fromMonthEl = document.getElementById("fromMonth"),
+		fromDayEl = document.getElementById("fromDay"),
+		toYearEl = document.getElementById("toYear"),
+		toMonthEl = document.getElementById("toMonth"),
+		toDayEl = document.getElementById("toDay"),
+		from = new Date(),
+		to = new Date();
+
+	from.setHours(0);
+	from.setMinutes(0);
+	from.setSeconds(0);
+	to.setHours(23);
+	to.setMinutes(59);
+	to.setSeconds(59);
+
+	genLink.onclick = function() {
+		from.setFullYear(fromYearEl.value);
+		from.setMonth(fromMonthEl.value - 1);
+		from.setDate(fromDayEl.value);
+
+		to.setFullYear(toYearEl.value);
+		to.setMonth(toMonthEl.value - 1);
+		to.setDate(toDayEl.value);
+
+		outLink.value = "http://wojtek.it/deadline?from=" + (Math.round(from.getTime()/1000))
+				+ "&to=" + Math.round(to.getTime()/1000);
+	}
+</script>
+			</div>
+</div>
+<aside xmlns:php="http://php.net/xsl"><div xmlns:php="http://php.net/xsl" class="content">
+<div class="media">
+<img class="pull-right media-object img-polaroid" src="/images/wojtek.jpg" width="80" />
+<p class="media-body">
+	Hi, I&apos;m Wojtek. I&apos;m a <b>performance software engineer</b> at BSkyB.
+	I like good food, music and photography.
+</p>
+</div>
+<!--
+<a class="twitter-timeline" href="https://twitter.com/woledzki" data-widget-id="302516170496557057">Tweets by @woledzki</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
+						</div>
+</aside>
+<div xmlns:php="http://php.net/xsl" class="grid-footer">
+			copyright 2012 - Wojtek Olędzki.
+			<span class="pull-right"><a href="/en/about">About</a></span>
+</div>
+<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-37323022-1"]);
+				
+				_gaq.push(["_trackPageview"]);
+
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript";
+					ga.async = true;
+					ga.src = ("https:" == document.location.protocol ?
+							"https://ssl" : "http://www")
+							+ ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+<script src="/static/scripts/app.js" type="text/javascript"></script>
+</body>
+</html>
