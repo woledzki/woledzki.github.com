@@ -6,21 +6,23 @@
 	<xsl:output method="html" encoding="utf-8" indent="yes" />
 
 	<xsl:template match="/component">
-		<div class="tile {data/size}">
-			<xsl:if test="data/href">
-				<xsl:attribute name="data-href">
-					<xsl:value-of select="data/href" />
-				</xsl:attribute>
-			</xsl:if>
-			<xsl:if test="data/image">
-				<xsl:attribute name="style">
-					min-height: 140px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />) no-repeat top center
-				</xsl:attribute>
-			</xsl:if>
-			<div class="caption">
-				<xsl:apply-templates select="data/text" />
+		<xsl:text disable-output-escaping="yes"> --&gt;</xsl:text><div class="tile {data/size}">
+			<div class="tile-frame {data/style}">
+				<xsl:if test="data/href">
+					<xsl:attribute name="data-href">
+						<xsl:value-of select="data/href" />
+					</xsl:attribute>
+				</xsl:if>
+				<xsl:if test="data/image">
+					<xsl:attribute name="style">
+						min-height: 50px; padding-top: 90px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />) no-repeat top center
+					</xsl:attribute>
+				</xsl:if>
+				<div class="caption">
+					<xsl:apply-templates select="data/text" />
+				</div>
 			</div>
-		</div>
+		</div><xsl:text disable-output-escaping="yes">&lt;!-- </xsl:text>
 	</xsl:template>
 
 	<xsl:template match="text">

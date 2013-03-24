@@ -6,12 +6,9 @@
 	<xsl:output method="html" encoding="utf-8" indent="yes" />
 
 	<xsl:template match="/component">
-		<aside>
-			<xsl:value-of select="$H_SUB_COMPONENTS" disable-output-escaping="yes" />
-		</aside>
+		<xsl:text disable-output-escaping="yes">&lt;!-- </xsl:text>
+		<xsl:value-of select="$H_SUB_COMPONENTS" disable-output-escaping="yes" />
+		<xsl:text disable-output-escaping="yes"> --&gt;</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="text">
-		<xsl:value-of select="." disable-output-escaping="yes" />
-	</xsl:template>
 </xsl:stylesheet>

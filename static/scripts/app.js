@@ -44,13 +44,14 @@ var app = window.app = {};
 	};
 
 	Page.prototype.hijackUrls = function() {
-		var allLinks = this.document.getElementsByClassName('tile');
+		var allLinks = this.document.getElementsByClassName('tile-frame');
 		for (var i = 0; i < allLinks.length; i++) {
 			if (allLinks[i].hasAttribute('data-href')) {
 				allLinks[i].onclick = function() {
 					var url = this.getAttribute('data-href');
 					window.location.href = url;
-				}
+				};
+				allLinks[i].style.cursor = 'pointer';
 			}
 		}
 	};

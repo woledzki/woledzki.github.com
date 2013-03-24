@@ -9,15 +9,13 @@
 		indent="yes" />
 
 	<xsl:template match="/component">
-		<div class="container">
-			<div class="page-footer">
-				copyright 2012 - Wojtek Olędzki.
-				<span class="pull-right">
-					<xsl:for-each select="data/link">
-						<a href="{@href}"><xsl:value-of select="." /></a>
-					</xsl:for-each>
-				</span>
-			</div>
+		<div class="grid-footer">
+			copyright 2012 - Wojtek Olędzki.
+			<span class="pull-right">
+				<xsl:for-each select="data/link">
+					<a href="{@href}"><xsl:value-of select="." /></a>
+				</xsl:for-each>
+			</span>
 		</div>
 	</xsl:template>
 

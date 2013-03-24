@@ -17,10 +17,10 @@
 
 	<target name="build"
 		description="Builds Website."
-		depends="clean,build.css.compress, build.js, build.html"
+		depends="clean, build.css.compress, build.js, build.html"
 	>
 	</target>
-	
+
 	<target name="clean">
 		<echo level="info">Deleting generated *.html files</echo>
 		<delete>
@@ -96,7 +96,9 @@
 	</target>
 	
 	<target name="build.html">
+		<mkdir dir="${dir.out.static}/styles/css" />
 		<exec executable="php">
+			<env key="DS_HOSTDIR" value="${dir.src}" />
 			<arg line="${cmd.ds-console}" />
 			<arg line="ds:generate" />
 			<arg line="--source='/'" />

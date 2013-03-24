@@ -6,7 +6,33 @@
 	<xsl:output method="html" encoding="utf-8" indent="yes" />
 
 	<xsl:template match="/component">
-		<div class="span-body">
+		<div class="grid-body">
+			<div class="page-header">
+				<h1>Wojtek Olędzki</h1>
+				
+				<xsl:if test="data/slug">
+					<ul class="breadcrumb">
+						<xsl:for-each select="data/slug">
+							<xsl:choose>
+								<xsl:when test="position() = last()">
+									<li class="active">
+										<xsl:value-of select="." />
+									</li>
+								</xsl:when>
+								<xsl:otherwise>
+									<li>
+										<a href="{@href}">
+											<xsl:value-of select="." />
+										</a>
+										<span class="divider">/</span>
+									</li>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:for-each>
+					</ul>
+				</xsl:if>
+			</div>
+			
 			<xsl:if test="data/tag">
 				<ul class="inline" style="border: 1px solid #eee; border-width: 0px 0 1px 0; padding: 0 0 6px 0">
 					<xsl:for-each select="data/tag">

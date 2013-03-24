@@ -6,70 +6,76 @@
 		<description></description>
 	</data>
 
-	<component extension="body" name="tile" template="section" id="5" parent-id="4">
-		<data>
-			<size>tile-sml</size>
-			<href>https://plus.google.com/photos/103706382130756305194/albums/5715798649142029985?authkey=CN-MlPPa9anJeQ</href>
-			<background>sketches.jpg</background>
-			<text><![CDATA[
-<h4>Moje Szkice</h4>
-</section>
-			]]></text>
-		</data>
+	<component extension="body" name="content" template="tiles">
+	
+		<component name="tile" template="section" id="5" parent-id="4">
+			<data>
+				<size>tile-sml</size>
+				<href>https://plus.google.com/photos/103706382130756305194/albums/5715798649142029985?authkey=CN-MlPPa9anJeQ</href>
+				<background>sketches.jpg</background>
+				<text><![CDATA[
+	<h4>Moje Szkice</h4>
+	</section>
+				]]></text>
+			</data>
+		</component>
+		<component name="tile-post" id="6" parent-id="4">
+			<data>
+				<size>tile-mid</size>
+				<href>/pl/przepisy</href>
+				<image>images/recipes.jpg</image>
+				<text><![CDATA[
+	<p><b>Przepisy Kulinarne.</b> Kto by pomyślał że komuś się to przyda :)
+	</p>
+				]]></text>
+			</data>
+		</component>
+		<component name="tile" template="section" id="7" parent-id="4">
+			<data>
+				<size>tile-sml</size>
+				<style>tile-orange</style>
+				<text><![CDATA[
+	<ul>
+		<li><a href="http://twitter.com/woledzki">Twitter</a></li>
+		<li><a href="http://instagram.com/woledzki">Instagram</a></li>
+		<li><a href="http://github.com/woledzki">github</a></li>
+		<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
+	</ul>
+				]]></text>
+			</data>
+		</component>
+		<component id="8" name="tile-post" parent-id="4">
+			<data>
+				<size><![CDATA[tile-mid]]></size>
+				<href>/pl/posts/2012/nowa-strona</href>
+				<text><![CDATA[
+					<p><b>Nowa Strona</b> ...</p>
+				]]></text>
+				<image>posts/nowa-strona.jpg</image>
+			</data>
+		</component>
+		<component name="tile-post" id="6" parent-id="4">
+			<data>
+				<size>tile-mid</size>
+				<href>/pl/posts/wakacje-2011</href>
+				<image>isla-canela-tile.jpg</image>
+				<text><![CDATA[
+	<p><b>Wakacje 2011.</b> Wybraliśmy się z Sylwią do Isla Canela w Hiszpanii.
+	</p>
+				]]></text>
+			</data>
+		</component>
+		<component id="8" name="tile-post" parent-id="4">
+			<data>
+				<size><![CDATA[tile-mid]]></size>
+				<href>/pl/posts/brukselskie-nudy</href>
+				<text><![CDATA[
+					<p><b>Brukselskie Max Nudy</b> - Właśnie siedzę drugą godzine przy biurku i ...</p>
+				]]></text>
+				<image>brussels-panorama.jpg</image>
+			</data>
+		</component>
+	
 	</component>
-	<component extension="body" name="tile-post" id="6" parent-id="4">
-		<data>
-			<size>tile-mid</size>
-			<href>/pl/przepisy</href>
-			<image>images/recipes.jpg</image>
-			<text><![CDATA[
-<p><b>Przepisy Kulinarne.</b> Kto by pomyślał że komuś się to przyda :)
-</p>
-			]]></text>
-		</data>
-	</component>
-	<component extension="body" name="tile" template="section" id="7" parent-id="4">
-		<data>
-			<size>tile-sml tile-orange</size>
-			<text><![CDATA[
-<ul>
-	<li><a href="http://twitter.com/woledzki">Twitter</a></li>
-	<li><a href="http://instagram.com/woledzki">Instagram</a></li>
-	<li><a href="http://github.com/woledzki">github</a></li>
-	<li><a href="http://hoborglabs.com">Hoborg Labs</a></li>
-</ul>
-			]]></text>
-		</data>
-	</component>
-	<component extension="body" id="8" name="tile-post" parent-id="4">
-		<data>
-			<size><![CDATA[tile-mid]]></size>
-			<href>/pl/posts/2012/nowa-strona</href>
-			<text><![CDATA[
-				<p><b>Nowa Strona</b> ...</p>
-			]]></text>
-			<image>posts/nowa-strona.jpg</image>
-		</data>
-	</component>
-	<component extension="body" name="tile-post" id="6" parent-id="4">
-		<data>
-			<size>tile-mid</size>
-			<href>/pl/posts/wakacje-2011</href>
-			<image>isla-canela-tile.jpg</image>
-			<text><![CDATA[
-<p><b>Wakacje 2011.</b> Wybraliśmy się z Sylwią do Isla Canela w Hiszpanii.
-</p>
-			]]></text>
-		</data>
-	</component>
-	<component extension="body" id="8" name="tile-post" parent-id="4">
-		<data>
-			<size><![CDATA[tile-mid]]></size>
-			<href>/pl/posts/brukselskie-nudy</href>
-			<text><![CDATA[
-				<p><b>Brukselskie Max Nudy</b> - Właśnie siedzę drugą godzine przy biurku i ...</p>
-			]]></text>
-			<image>brussels-panorama.jpg</image>
-		</data>
-	</component>
+	
 </component>

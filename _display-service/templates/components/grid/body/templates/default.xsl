@@ -9,38 +9,36 @@
 		indent="yes" />
 
 	<xsl:template match="/component">
-		<div class="container">
-			<div class="row">
-				<div class="span24">
-					<div class="page-header">
-						<h1>Wojtek Olędzki</h1>
-						<xsl:if test="data/slug">
-							<ul class="breadcrumb">
-								<xsl:for-each select="data/slug">
-									<xsl:choose>
-										<xsl:when test="position() = last()">
-											<li class="active">
-												<xsl:value-of select="." />
-											</li>
-										</xsl:when>
-										<xsl:otherwise>
-											<li>
-												<a href="{@href}">
-													<xsl:value-of select="." />
-												</a>
-												<span class="divider">/</span>
-											</li>
-										</xsl:otherwise>
-									</xsl:choose>
-								</xsl:for-each>
-							</ul>
-						</xsl:if>
-					</div>
-				</div>
-				<xsl:value-of
-					select="$H_SUB_COMPONENTS"
-					disable-output-escaping="yes" />
+		<div class="grid-body">
+			<div class="page-header">
+				<h1>Wojtek Olędzki</h1>
+				
+				<xsl:if test="data/slug">
+					<ul class="breadcrumb">
+						<xsl:for-each select="data/slug">
+							<xsl:choose>
+								<xsl:when test="position() = last()">
+									<li class="active">
+										<xsl:value-of select="." />
+									</li>
+								</xsl:when>
+								<xsl:otherwise>
+									<li>
+										<a href="{@href}">
+											<xsl:value-of select="." />
+										</a>
+										<span class="divider">/</span>
+									</li>
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:for-each>
+					</ul>
+				</xsl:if>
 			</div>
+			<xsl:value-of
+				select="$H_SUB_COMPONENTS"
+				disable-output-escaping="yes" 
+			/>
 		</div>
 	</xsl:template>
 

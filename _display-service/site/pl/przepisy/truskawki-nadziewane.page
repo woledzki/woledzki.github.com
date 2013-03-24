@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<date>2013-03-11</date>
+		<title><![CDATA[Nadziewane Truskawki]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/przepisy">Przepisy</slug>
+		<slug>Nadziewane Truskawki</slug>
+	</data>
+	<data extension="data-content">
+		<tag>Gluten Free</tag>
+		<tag>Deser</tag>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Nadziewane Truskawki
+
+Każdy lubi truskawki...
+<img src="/images/pl/przepisy/truskawki.jpg" class="img-polaroid" />
+
+
+
+### Składniki
+
+* Truskawki
+* Bita śmietana
+
+
+
+### Przygotowanie
+
+Myjemy truskawki i wybieramy ładne szpiczaste sztuki. Nakrajamy w krzyż z góry uwarzając aby nie przeciąc truskawki do
+końca. Następnie delikatnie rozszerzamy, i delikatnie aplikujemy bitą śmietane :)
+
+... uff, teraz tylko ładnie ułożyć na talerzu i gotowe!
+
+			]]></markdown>
+		</data>
+	</component>
+	<component extension="body" id="5" name="facebook-comments" parent-id="4">
+		<data>
+			<url>http://wojtek.it{{ url }}</url>
+		</data>
+	</component>
+</component>

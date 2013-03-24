@@ -1,0 +1,220 @@
+
+/**
+ * Set the spacing between your grid items.
+ */
+@gutter: 10px;
+
+/**
+ * Set the size of Side and Body of the page.
+ */
+@sideWidth: 200px;
+@sidePadding: 50px;
+@bodyWidth: 600px;
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.tile h4 {
+	margin: 0px;
+	padding: 14px 0px;
+}
+ 
+/**
+ * Set the spacing between your grid items.
+ */
+
+/**
+ * Set the spacing between your grid items.
+ */
+.grid, .page {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -@gutter;
+  /* [3] */
+}
+
+.tile-frame {
+	box-shadow: 1px 1px 8px #555;
+	background-color: #FFF;
+	min-height: 60px;
+}
+.tile-frame:hover {
+	box-shadow: 1px 1px 10px #333;
+/*
+	margin-left: 8px;
+	margin-right: 2px;
+*/
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.tile {
+  display: inline-block;
+  /* [1] */
+  padding: 0px 0px @gutter @gutter;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+}
+
+
+.tile-min {
+  width: 65px;
+  min-height: 65px;
+}
+.tile-sml {
+  width: 25%;
+  min-height: 140px;
+}
+.tile-mid {
+  width: 50%;
+  min-height: 140px;
+}
+.tile-lrg {
+  min-height: 140px;
+}
+
+.grid-body {
+	width: @bodyWidth;
+	margin: auto;
+}
+.grid-footer {
+	width: @bodyWidth;
+	margin: 10px auto 20px auto;
+	border-top: 1px solid @grayLighter;
+}
+aside {
+	color: white;
+	background-color: #232323;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: @sideWidth;
+	padding: @sidePadding;
+	height: 100%;
+}
+
+@media (min-width: @w2) {
+	aside .media {
+		margin: 0px;
+	}
+	aside .media .media-object {
+		float: none;
+		margin: 0 0 20px 0;
+	}
+}
+
+
+
+/**
+ * Body connects with aside - time to change the layout.
+ */
+@w1: 2 * (@sideWidth + 2 * @sidePadding + @gutter) + @bodyWidth - 1;
+@media (max-width: @w1) {
+	
+	.grid-body {
+		float: right;
+		margin-right: @sideWidth + 2 * @sidePadding + @gutter;
+	}
+	.grid-footer {
+		float: right;
+		margin-right: @sideWidth + 2 * @sidePadding + @gutter;
+	}
+}
+
+
+
+/**
+ *
+*/
+@w2: @sideWidth + 2 * (@sidePadding + @gutter) + @bodyWidth - 1;
+@media (max-width: @w2) {
+	
+	.grid-body {
+		float: none;
+		margin: auto;
+	}
+	.grid-footer {
+		float: none;
+		margin: 10px auto 20px auto;
+	}
+
+	aside {
+		position: relative;
+		display: block;
+		height: auto;
+		width: 100%;
+		margin: 20px 0px 0px 0px;
+		padding: 20px 0px 50px 0px;
+	}
+		aside .media {
+			width: @bodyWidth;
+			margin: auto;
+		}
+}
+ 
+/**
+ * desk
+ */
+@media (max-width: @bodyWidth) {
+	
+	.grid-body {
+		float: none;
+		margin: auto;
+		width: 90%;
+	}
+	.grid-footer {
+		float: none;
+		margin: 10px auto 20px auto;
+		width: 90%;
+	}
+		aside .media {
+			width: 90%;
+			margin: auto;
+		}
+}
+
+@media (max-width: 480px) {
+	.tile-min {
+		width: 50%;
+		min-height: 65px;
+	}
+	.tile-sml {
+		width: 50%;
+		min-height: 140px;
+	}
+}
+@media (max-width: 320px) {
+	.tile-min {
+		width: 50%;
+		min-height: 65px;
+	}
+	.tile-sml {
+		width: 100%;
+		min-height: 140px;
+	}
+	.tile-mid {
+		width: 100%;
+		min-height: 140px;
+	}	
+}
