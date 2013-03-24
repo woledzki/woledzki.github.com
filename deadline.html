@@ -38,17 +38,20 @@
 		while (match = search.exec(query))
 			urlParams[decode(match[1])] = decode(match[2]);
 
-		console.log(urlParams);
+		update(urlParams);
+		setInterval("update(urlParams)", 600 * 1000);
 
-		var now = new Date().getTime() / 1000;
-		var p = 0;
-		if (now > urlParams.from && now < urlParams.to) {
-			p = 100 * (now - urlParams.from)/(urlParams.to - urlParams.from)
-		} else if (now > urlParams.to) {
-			p = 100;
+		function update(params) {
+			var now = new Date().getTime() / 1000;
+			var p = 0;
+			if (now > params.from && now < params.to) {
+				p = 100 * (now - params.from)/(params.to - params.from)
+			} else if (now > params.to) {
+				p = 100;
+			}
+
+			move(p);
 		}
-
-		move(p);
 
 		function move(progress) {
 			if (progress > 100) {
