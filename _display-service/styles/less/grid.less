@@ -1,8 +1,25 @@
+/**
+ * Wojtek.it page grid CSS.
+ *
+ * This file defines
+ * - main grid (body and side)
+ * - homepage tiles
+ */
+
+
 
 /**
- * Set the spacing between your grid items.
+ * Variables.
  */
+/* Set the spacing between your grid items. */
 @gutter: 10px;
+
+/**
+ * Main Grid
+ */
+
+
+
 
 /**
  * Set the size of Side and Body of the page.
@@ -16,11 +33,6 @@ body {
 	padding: 0px;
 }
 
-
-.tile h4 {
-	margin: 0px;
-	padding: 14px 0px;
-}
  
 /**
  * Set the spacing between your grid items.
@@ -29,7 +41,7 @@ body {
 /**
  * Set the spacing between your grid items.
  */
-.grid, .page {
+.grid {
   list-style: none;
   /* [1] */
   margin: 0;
@@ -40,17 +52,18 @@ body {
   /* [3] */
 }
 
+/**
+ * overflow: hidden - Thanks Csswizadry! If you want to know more check these links:
+ * http://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
+ */
 .tile-frame {
 	box-shadow: 1px 1px 6px #555;
 	background-color: #FFF;
 	min-height: 120px;
+	overflow: hidden;
 }
 .tile-frame:hover {
 	box-shadow: 1px 1px 10px #333;
-/*
-	margin-left: 8px;
-	margin-right: 2px;
-*/
 }
 
 /**

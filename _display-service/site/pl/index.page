@@ -24,9 +24,7 @@
 				<size>tile-mid</size>
 				<href>/pl/deadline</href>
 				<image>images/deadline.png</image>
-				<text><![CDATA[
-	<p><b>Deadline</b> widget - try it yourself</p>
-				]]></text>
+				<text><![CDATA[<p>a Ty na kiedy masz <b>deadline</b>?</p>]]></text>
 			</data>
 		</component>
 		<component name="tile" template="section" id="7" parent-id="4">
