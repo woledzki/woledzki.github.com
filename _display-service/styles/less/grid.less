@@ -60,10 +60,14 @@ body {
 	box-shadow: 1px 1px 6px #555;
 	background-color: #FFF;
 	min-height: 120px;
-	overflow: hidden;
+	overflow: hidden; // fix 
+	-webkit-transition: 0.2s;
+	   -moz-transition: 0.2s;
+	        transition: 0.2s;
 }
 .tile-frame:hover {
-	box-shadow: 1px 1px 10px #333;
+	box-shadow: 2px 2px 10px #222;
+	margin: -2px 2px 2px -2px;
 }
 
 /**
