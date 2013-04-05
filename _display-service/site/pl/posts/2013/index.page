@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[Wojtek Olędzki - 2013]]></title>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/posts">Blog</slug>
+		<slug>2013</slug>
+	</data>
+
+	<component extension="body" id="4" name="posts-index" parent-id="4">
+		<data>
+			<folder>pl/posts/2013</folder>
+		</data>
+	</component>
+</component>
