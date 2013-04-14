@@ -16,6 +16,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, "script", "facebook-jssdk"));</script>
 
-		<div class="fb-comments" data-href="{data/url}" data-width="470" data-num-posts="2"></div>
+		<div class="fb-comments" data-href="{data/url}" data-width="600" data-num-posts="2"></div>
 	</xsl:template>
 </xsl:stylesheet>
