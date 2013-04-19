@@ -59,7 +59,7 @@ Content-Language: pl
 
 Operacja nie została poprawnie zautoryzowana.
 
-<img src="ing-invalid-token.png" />
+<img class="img-polaroid" src="/ing-invalid-token.png" />
 
 			]]></markdown>
 		</data>
