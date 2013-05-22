@@ -22,16 +22,14 @@
 				<meta name="keywords" content="" />
 				<meta name="description" content="" />
 
-				<link rel="shortcut icon"
-					href="{$H_BASE_PATH}/favicon.ico"
-					type="image/x-icon" />
-				<link rel="icon"
-					href="{$H_BASE_PATH}/favicon.ico"
-					type="image/x-icon" />
+				<link rel="shortcut icon" href="{$H_BASE_PATH}/favicon.ico" type="image/x-icon" />
+				<link rel="icon" href="{$H_BASE_PATH}/favicon.ico" type="image/x-icon" />
 
 				<link rel="stylesheet" type="text/css" media="all"
 					href="{$H_BASE_PATH}/static/styles/css/main.css"
 				/>
+
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 			</head>
 			<body>
 				<div class="container">

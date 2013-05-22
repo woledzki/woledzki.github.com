@@ -40,6 +40,11 @@ body {
 	margin-left: 6px;
 }
 
+.media-object {
+	float: left;
+	margin-right: @gutter
+}
+
  
 /**
  * Set the spacing between your grid items.
@@ -138,11 +143,13 @@ aside {
 	height: 100%;
 }
 
+
+
 @media (min-width: @w2) {
 	aside .media {
 		margin: 0px;
 	}
-	aside .media .media-object {
+	aside .media-object {
 		float: none;
 		margin: 0 0 20px 0;
 	}
@@ -153,7 +160,7 @@ aside {
 /**
  * Body connects with aside - time to change the layout.
  */
-@w1: 2 * (@sideWidth + 2 * @sidePadding + @gutter) + @bodyWidth - 1;
+@w1: 2 * (@sideWidth + 2 * (@sidePadding + @gutter)) + @bodyWidth - 1;
 @media (max-width: @w1) {
 	
 	.grid-body {
@@ -221,24 +228,26 @@ aside {
 @media (max-width: 480px) {
 	.tile-min {
 		width: 50%;
-		min-height: 65px;
 	}
 	.tile-sml {
 		width: 50%;
-		min-height: 140px;
 	}
 }
-@media (max-width: 320px) {
+
+@media (max-width: 321px) {
 	.tile-min {
 		width: 50%;
-		min-height: 65px;
 	}
 	.tile-sml {
 		width: 100%;
-		min-height: 140px;
 	}
 	.tile-mid {
 		width: 100%;
-		min-height: 140px;
-	}	
+	}
+
+	.media-object {
+		display: block;
+		float: none;
+		margin: 0 auto 16px auto;
+	}
 }
