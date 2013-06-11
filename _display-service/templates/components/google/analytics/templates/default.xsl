@@ -10,6 +10,7 @@
 			<script type="text/javascript">
 				var _gaq = _gaq || [];
 				_gaq.push(["_setAccount", "<xsl:value-of select="data/account" />"]);
+				_gaq.push(["_setSiteSpeedSampleRate", 100]); // #protip
 				<xsl:if test="data/domain">
 					_gaq.push(["_setDomainName", "<xsl:value-of select="data/domain" />"]);
 				</xsl:if>
