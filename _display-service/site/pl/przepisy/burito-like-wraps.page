@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<date>2013-07-07</date>
+		<title><![CDATA[Szybkie Burrito]]></title>
+		<keywords>Wojtek Olędzki, przepisy, krewetki</keywords>
+		<description>Przepis na szybki obiad z krewetkami, możesz go podać na stół w 30 minut.</description>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug href="/pl/przepisy">Przepisy</slug>
+		<slug>Szybkie Burrito</slug>
+	</data>
+	<data extension="data-content">
+		<tag>Gluten Free</tag>
+		<tag>30min</tag>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Szybkie Burrito
+
+Coś innego, bezglutenowe burrito.
+
+<< obrazek >>
+
+### Składniki
+
+Porcja dla dwóch/trzech osób:
+
+* Bezglutenowe wrapy Warburtons Free From Wraps / £3
+* Ryż Meksykański Uncle Bens / £1.5
+* Słoik sosu Doritos Mild Salsa / £2
+* Mała kwaśna śmietana / £1
+* Mięso mielone 200g
+* Groszek zielony
+* Tarty ser
+
+#### Co potrzeba?
+
+* Naczynie żaroodporne
+
+
+
+### Przygotowanie
+
+Potrzebujemy patelnie i maly garnek na groszek. Zaczynamy od wstawienia
+wody w czajniku elektrycznym i wrzucenia 1/2 szklanki groszku do
+garnka. Teraz kolej na mięso, które ląduje na gorącą patelnie - mieszamy,
+rozdrabniamy, itd. Woda w między czasie już się pewnie zagotowana, więc
+zalewamy groszek, tak żeby tylko go przykryć i solimy do smaku.
+
+Super, miesko już pewnie gotowe a groszek juz cieply. Odcedzamy groszek
+i odstawiamy na potem. Dodajemy połowe sosu Doritos do mięsa i
+zostawiamy na małym ogniu.
+
+Wyciągamy kolejny garnek lub miskę i wrzucamy do niej ryż Meksykański
+Uncle Bens, dodajmy groszek i mięso. Wszystko dokładnie mieszamy.  
+Wyciągamy wrapy i posypujemy je serem a nastepnie nakładamy mięso z
+ryżem. Teraz już tylko zawijamy i wkładamy do naczynia żaroodpornego,
+które wstawiamy na 20min do piekarnika rozgrzanego do 180C.
+
+
+### Jak podawać?
+
+Podajemy ze śmietaną i sosem Doritos. Piękne bo proste :)
+
+			]]></markdown>
+		</data>
+	</component>
+
+	<component extension="body" id="5" name="facebook-comments" parent-id="4">
+		<data>
+			<url>http://wojtek.it{{ url }}</url>
+		</data>
+	</component>
+</component>
