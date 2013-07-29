@@ -19,6 +19,12 @@
 		description="Builds Website."
 		depends="clean, build.css.compress, build.js, build.html"
 	>
+		<mkdir dir="${dir.base}/build/" />
+		<delete file="${dir.base}/build/wojtek.it.tgz" failonerror="no" />
+		<tar destfile="${dir.base}/build/wojtek.it.tgz" basedir="${dir.base}"
+			excludes="_display-service, cache, includes, test, _config.yml, build*, CNAME, README.md"
+			compression="gzip"
+		/>
 	</target>
 
 	<target name="clean">
@@ -95,9 +101,8 @@
 			</fileset>
 		</concat>
 	</target>
-	
+
 	<target name="build.html">
-		<mkdir dir="${dir.out.static}/styles/css" />
 		<exec executable="php">
 			<env key="DS_HOSTDIR" value="${dir.src}" />
 			<arg line="${cmd.ds-console}" />
@@ -105,6 +110,18 @@
 			<arg line="--source='/'" />
 			<arg line="--output='${dir.base}'" />
 		</exec>
+	</target>
+
+	<target name="deploy" if="deploy.do_deploy">
+		<scp file="${dir.base}/build/wojtek.it.tgz"
+			todir="${deploy.user}@${deploy.host}:${deploy.target}"
+			keyfile="${deploy.keyfile}"
+		/>
+		<sshexec host="${deploy.host}"
+			username="${deploy.user}"
+			keyfile="${deploy.keyfile}"
+			command="tar xzf ${deploy.target}/wojtek.it.tgz -C ${deploy.target}/public"
+		/>
 	</target>
 
 	<!-- Help Message -->

@@ -10,3 +10,5 @@
 /_display-service/conf/*/*.ini
 !*.default.yml
 !*.default.ini
+
+/build

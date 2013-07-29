@@ -15,17 +15,29 @@
 				</xsl:if>
 				<xsl:if test="data/image">
 					<xsl:attribute name="style">
-						min-height: 100px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />) no-repeat top center
+						min-height: 100px; background-image: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/image" />)
 					</xsl:attribute>
 				</xsl:if>
-				<div class="caption">
-					<xsl:apply-templates select="data/text" />
-				</div>
+				<xsl:apply-templates select="data/caption" />
+				<xsl:apply-templates select="data/text" />
+				<xsl:apply-templates select="data/footer" />
 			</div>
 		</div><xsl:text disable-output-escaping="yes">&lt;!-- </xsl:text>
 	</xsl:template>
 
+	<xsl:template match="caption">
+		<div class="caption">
+			<xsl:value-of select="." disable-output-escaping="yes" />
+		</div>
+	</xsl:template>
 	<xsl:template match="text">
-		<xsl:value-of select="." disable-output-escaping="yes" />
+		<div class="text">
+			<xsl:value-of select="." disable-output-escaping="yes" />
+		</div>
+	</xsl:template>
+	<xsl:template match="footer">
+		<div class="footer">
+			<xsl:value-of select="." disable-output-escaping="yes" />
+		</div>
 	</xsl:template>
 </xsl:stylesheet>

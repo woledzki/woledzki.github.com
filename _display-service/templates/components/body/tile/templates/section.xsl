@@ -15,7 +15,7 @@
 				</xsl:if>
 				<xsl:if test="data/background">
 					<xsl:attribute name="style">
-						height: 120px; background: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/background" />) no-repeat top right
+						background-image: url(<xsl:value-of select="$H_BASE_PATH" />/<xsl:value-of select="data/background" />)
 					</xsl:attribute>
 				</xsl:if>
 				<section>
