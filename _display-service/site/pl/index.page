@@ -34,6 +34,17 @@
 			</data>
 		</component>
 
+
+		<component name="tile-post" id="6" parent-id="4">
+			<data>
+				<size>tile-mid tile-frame-B</size>
+				<href>/pl/przepisy/burito-like-wraps</href>
+				<image>images/burrito.jpg</image>
+				<caption><![CDATA[<p><b>Gluten-Free Burrito!</b> Szybko i łatwo</p>]]></caption>
+				<footer><![CDATA[07/07/2013]]></footer>
+			</data>
+		</component>
+
 		<component id="8" name="tile-post" parent-id="4">
 			<data>
 				<size><![CDATA[tile-mid tile-frame-O]]></size>
