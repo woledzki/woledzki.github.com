@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:php="http://php.net/xsl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Wojtek Oledzki</title>
+<meta name="keywords" content="Wojtek Olędzki, Blog, Przepisy">
+<meta name="description" content="">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="all" href="/static/styles/css/groszek.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+	<section class="content--small">
+		<h1>Lorem Ipsum</h1>
+		<p>Lorem ispum dolor sit ament lorem ipsum dolor</p>
+
+		<p>... Lorem ispum dolor sit ament lorem ipsum dolor.</p>
+	</section>
+
+	<section class="groszek groszek--preview"></section>
+
+	<section class="content--small">
+		<h2>Lorem Ipsum</h2>
+		<p>Lorem ispum dolor sit ament lorem ipsum dolor</p>
+	</section>
+
+	<section class="groszek">
+		<h2>19 Tydzień</h2>
+	</section>
+
+	<section class="content--small">
+		<p>
+			Gorące pozdrowienia
+		<p>
+	</section>
+</div>
+
+<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-37323022-1"]);
+				_gaq.push(["_setSiteSpeedSampleRate", 100]); // #protip
+
+				_gaq.push(["_trackPageview"]);
+
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript";
+					ga.async = true;
+					ga.src = ("https:" == document.location.protocol ?
+							"https://ssl" : "http://www")
+							+ ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+
+<script type="text/javascript">
+	var groszek = createSectionHandler(window.document.getElementById('groszek_01'));
+	groszek(window.pageXOffset, window.pageYOffset);
+
+	window.onscroll = function (oEvent) {
+		groszek(window.pageXOffset, window.pageYOffset);
+	}
+	function createSectionHandler(el) {
+		var options = {
+			speed: el.getAttribute('data-speed') || 1,
+			horizontal: el.getAttribute('data-horizontal') || 0,
+			width: el.getAttribute('data-width') || 800,
+			height: el.getAttribute('data-height') || 600,
+		};
+		var elPos = getPos(el);
+		var totalHeight = window.innerHeight;
+		var visibilityYEdge = elPos.y - totalHeight;
+		var elSize = {
+			width: el.clientWidth,
+			height: el.clientHeight,
+			aspect: el.clientWidth/el.clientHeight,
+		};
+		var imgSize = {
+			width: options.width,
+			height: options.height,
+			aspect: options.width/options.height,
+		};
+		var bgSize = backgroundSize(elSize, imgSize);
+
+		var a = (totalHeight - elSize.height);
+
+		return function(pageXOffset, pageYOffset) {
+			if (visibilityYEdge > pageYOffset || (elPos.y + elSize.h) < pageYOffset) {
+				return;
+			}
+
+			var diff = 1 - (a - (elPos.y - pageYOffset)) / a;
+
+			el.style.backgroundPosition = 'center ' + (-1 * options.speed * diff * (bgSize.height - elSize.height)) + 'px';
+
+			// if (options.horizontal) {
+			// 	left = diff * options.horizontal;
+			// 	el.style.backgroundPosition = left + 'px ' + top + 'px';
+			// }
+		};
+	}
+
+	function getPos(el) {
+		// yay readability
+		for (var lx=0, ly=0;
+			el != null;
+			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+
+		return {x: lx,y: ly};
+	}
+
+	function backgroundSize(elSize, imgSize) {
+		if (elSize.aspect > imgSize.aspect) {
+			return {
+				width: elSize.width,
+				height: (imgSize.height * elSize.width/imgSize.width),
+			};
+		} else {
+			return {
+				width: (imgSize.width * elSize.height/imgSize.height),
+				height: elSize.height,
+			};
+		}
+	}
+</script>
+</body>
+</html>
