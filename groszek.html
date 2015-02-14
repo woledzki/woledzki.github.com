@@ -11,48 +11,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
+	<header>
+		<section class="content--small">
+			<h1>Moi Drodzy</h1>
+		</section>
+	</header>
+	
 	<section class="content--small">
-		<h1>Lorem Ipsum</h1>
-		<p>Lorem ispum dolor sit ament lorem ipsum dolor</p>
-
-		<p>... Lorem ispum dolor sit ament lorem ipsum dolor.</p>
+		<p>Ja Wojtek razem z moją super żoną Sylwią pragniemy Wam serdecznie oznajmić...</p>
 	</section>
 
-	<section class="groszek groszek--preview"></section>
+	<section id="groszek_01" class="groszek--preview" data-range="50"></section>
 
 	<section class="content--small">
-		<h2>Lorem Ipsum</h2>
-		<p>Lorem ispum dolor sit ament lorem ipsum dolor</p>
+		<p>... że na 10-tą rocznicę naszej znajomości zmajstrowaliśmy małe co nieco.</p>
 	</section>
 
-	<section class="groszek">
+
+	<section class="content--small">
+		<h2>Oto Groszek</h2>
+		<p></p>
+	</section>
+
+	<section class="groszek" data-speed="2">
 		<h2>19 Tydzień</h2>
+		<img src="/images/groszek01.jpg">
 	</section>
 
 	<section class="content--small">
 		<p>
-			Gorące pozdrowienia
+			Gorące pozdrowienia od nas dla Was,
 		<p>
+		<p>Sylwia i Wojtek</p>
 	</section>
 </div>
 
 <script type="text/javascript">
-				var _gaq = _gaq || [];
-				_gaq.push(["_setAccount", "UA-37323022-1"]);
-				_gaq.push(["_setSiteSpeedSampleRate", 100]); // #protip
+	var _gaq = _gaq || [];
+	_gaq.push(["_setAccount", "UA-37323022-1"]);
+	_gaq.push(["_setSiteSpeedSampleRate", 100]); // #protip
 
-				_gaq.push(["_trackPageview"]);
+	_gaq.push(["_trackPageview"]);
 
-				(function() {
-					var ga = document.createElement("script"); ga.type = "text/javascript";
-					ga.async = true;
-					ga.src = ("https:" == document.location.protocol ?
-							"https://ssl" : "http://www")
-							+ ".google-analytics.com/ga.js";
-					var s = document.getElementsByTagName("script")[0];
-					s.parentNode.insertBefore(ga, s);
-				})();
-			</script>
+	(function() {
+		var ga = document.createElement("script"); ga.type = "text/javascript";
+		ga.async = true;
+		ga.src = ("https:" == document.location.protocol ?
+				"https://ssl" : "http://www")
+				+ ".google-analytics.com/ga.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
 
 <script type="text/javascript">
 	var groszek = createSectionHandler(window.document.getElementById('groszek_01'));
@@ -61,13 +71,17 @@
 	window.onscroll = function (oEvent) {
 		groszek(window.pageXOffset, window.pageYOffset);
 	}
+
 	function createSectionHandler(el) {
 		var options = {
-			speed: el.getAttribute('data-speed') || 1,
-			horizontal: el.getAttribute('data-horizontal') || 0,
-			width: el.getAttribute('data-width') || 800,
-			height: el.getAttribute('data-height') || 600,
+			range: el.getAttribute('data-range') || 100,
+			begin: el.getAttribute('data-begin') || null,
 		};
+
+		if (null === options.begin) {
+			options.begin = (100 - options.range) / 2;
+		}
+
 		var elPos = getPos(el);
 		var totalHeight = window.innerHeight;
 		var visibilityYEdge = elPos.y - totalHeight;
@@ -76,28 +90,19 @@
 			height: el.clientHeight,
 			aspect: el.clientWidth/el.clientHeight,
 		};
-		var imgSize = {
-			width: options.width,
-			height: options.height,
-			aspect: options.width/options.height,
-		};
-		var bgSize = backgroundSize(elSize, imgSize);
 
 		var a = (totalHeight - elSize.height);
+		var end = totalHeight + visibilityYEdge + elSize.height;
 
 		return function(pageXOffset, pageYOffset) {
-			if (visibilityYEdge > pageYOffset || (elPos.y + elSize.h) < pageYOffset) {
+			if (visibilityYEdge > pageYOffset || end < pageYOffset) {
 				return;
 			}
 
-			var diff = 1 - (a - (elPos.y - pageYOffset)) / a;
+			var b = (elPos.y + elSize.height - pageYOffset)
+			var p = 100 - (options.begin + (options.range * (totalHeight - b) / totalHeight));
 
-			el.style.backgroundPosition = 'center ' + (-1 * options.speed * diff * (bgSize.height - elSize.height)) + 'px';
-
-			// if (options.horizontal) {
-			// 	left = diff * options.horizontal;
-			// 	el.style.backgroundPosition = left + 'px ' + top + 'px';
-			// }
+			el.style.backgroundPosition = '50% ' + p+'%';
 		};
 	}
 
@@ -108,20 +113,6 @@
 			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
 
 		return {x: lx,y: ly};
-	}
-
-	function backgroundSize(elSize, imgSize) {
-		if (elSize.aspect > imgSize.aspect) {
-			return {
-				width: elSize.width,
-				height: (imgSize.height * elSize.width/imgSize.width),
-			};
-		} else {
-			return {
-				width: (imgSize.width * elSize.height/imgSize.height),
-				height: elSize.height,
-			};
-		}
 	}
 </script>
 </body>
