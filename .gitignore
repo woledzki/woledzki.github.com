@@ -3,6 +3,7 @@
 /.settings
 *.swp
 *.properties
+.DS_Store
 
 /_display-service/cache
 /_display-service/public/static
@@ -12,3 +13,4 @@
 !*.default.ini
 
 /build
+/node_modules

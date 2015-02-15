@@ -33,11 +33,14 @@
 		<p></p>
 	</section>
 
-	<section id="groszek_00" class="groszek" data-begin="0" data-speed="1" style="background-image: url(/images/groszek00.jpg)">
+	<section class="groszek" style="background-image: url(/images/groszek00.jpg)">
+		<h2 class="right">17 Tydzień</h2>
+	</section>
+	<section class="groszek" style="background-image: url(/images/groszek01.jpg)">
 		<h2>18 Tydzień</h2>
 	</section>
-	<section id="groszek_01" class="groszek" data-begin="0" data-range="100" style="background-image: url(/images/groszek01.jpg)">
-		<h2>19 Tydzień</h2>
+	<section class="groszek" style="background-image: url(/images/groszek02.jpg)">
+		<h2 class="right">19 Tydzień</h2>
 	</section>
 
 	<section class="content--small">
@@ -70,13 +73,8 @@
 	var groszek = createSectionHandler(window.document.getElementById('groszek_prev'));
 	groszek(window.pageXOffset, window.pageYOffset);
 
-	var groszek00 = createSectionHandler(window.document.getElementById('groszek_00'));
-	var groszek01 = createSectionHandler(window.document.getElementById('groszek_01'));
-
 	window.onscroll = function (oEvent) {
 		groszek(window.pageXOffset, window.pageYOffset);
-		groszek00(window.pageXOffset, window.pageYOffset);
-		groszek01(window.pageXOffset, window.pageYOffset);
 	}
 
 	function createSectionHandler(el) {
@@ -111,7 +109,7 @@
 			var b = (elPos.y + elSize.height - pageYOffset)
 			var p = (options.begin + (options.range * (totalHeight - b) / totalHeight));
 
-			el.style.backgroundPosition = '50% ' + p+'vh';
+			el.style.backgroundPosition = '50% ' + p+'%';
 		};
 	}
 
