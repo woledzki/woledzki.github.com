@@ -16,12 +16,12 @@
 			<h1>Moi Drodzy</h1>
 		</section>
 	</header>
-	
+
 	<section class="content--small">
 		<p>Ja Wojtek razem z moją super żoną Sylwią pragniemy Wam serdecznie oznajmić...</p>
 	</section>
 
-	<section id="groszek_01" class="groszek--preview" data-range="50"></section>
+	<section id="groszek_prev" class="groszek--preview" data-range="50"></section>
 
 	<section class="content--small">
 		<p>... że na 10-tą rocznicę naszej znajomości zmajstrowaliśmy małe co nieco.</p>
@@ -33,9 +33,11 @@
 		<p></p>
 	</section>
 
-	<section class="groszek" data-speed="2">
+	<section id="groszek_00" class="groszek" data-begin="0" data-speed="1" style="background-image: url(/images/groszek00.jpg)">
+		<h2>18 Tydzień</h2>
+	</section>
+	<section id="groszek_01" class="groszek" data-begin="0" data-range="100" style="background-image: url(/images/groszek01.jpg)">
 		<h2>19 Tydzień</h2>
-		<img src="/images/groszek01.jpg">
 	</section>
 
 	<section class="content--small">
@@ -65,11 +67,16 @@
 </script>
 
 <script type="text/javascript">
-	var groszek = createSectionHandler(window.document.getElementById('groszek_01'));
+	var groszek = createSectionHandler(window.document.getElementById('groszek_prev'));
 	groszek(window.pageXOffset, window.pageYOffset);
+
+	var groszek00 = createSectionHandler(window.document.getElementById('groszek_00'));
+	var groszek01 = createSectionHandler(window.document.getElementById('groszek_01'));
 
 	window.onscroll = function (oEvent) {
 		groszek(window.pageXOffset, window.pageYOffset);
+		groszek00(window.pageXOffset, window.pageYOffset);
+		groszek01(window.pageXOffset, window.pageYOffset);
 	}
 
 	function createSectionHandler(el) {
@@ -95,14 +102,16 @@
 		var end = totalHeight + visibilityYEdge + elSize.height;
 
 		return function(pageXOffset, pageYOffset) {
+
 			if (visibilityYEdge > pageYOffset || end < pageYOffset) {
 				return;
 			}
+			console.log(el.getAttribute('id') ,visibilityYEdge, pageYOffset, end)
 
 			var b = (elPos.y + elSize.height - pageYOffset)
-			var p = 100 - (options.begin + (options.range * (totalHeight - b) / totalHeight));
+			var p = (options.begin + (options.range * (totalHeight - b) / totalHeight));
 
-			el.style.backgroundPosition = '50% ' + p+'%';
+			el.style.backgroundPosition = '50% ' + p+'vh';
 		};
 	}
 
