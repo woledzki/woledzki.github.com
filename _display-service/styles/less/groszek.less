@@ -50,14 +50,12 @@ header {
 	max-width: 90%;
 }
 .groszek {
-	//box-shadow: 0 0 12px #000000;
 	border-width: 2px 0;
 	border-color: #000000;
 	border-style: solid;
 	height: 100vh;
 	margin: 0 auto;
 
-	background-attachment: fixed;
 	background-position: 50% 50%;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -79,8 +77,8 @@ header {
 .groszek--preview {
 	height: 100px;
 	background-image: url(/images/groszek01.jpg);
-	background-size: cover;
-	background-position: 50% 0px;
+	background-size: 100%;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 
 	&:before {
@@ -89,6 +87,12 @@ header {
 		width: 100%;
 		height: 100%;
 		background-image: linear-gradient(to bottom,#FFFFFF,rgba(255,255,255,0),rgba(255,255,255,0),#FFFFFF);
+	}
+}
+@media only screen
+and (min-device-width : 1024px) {
+	.groszek {
+		background-attachment: fixed;
 	}
 }
 

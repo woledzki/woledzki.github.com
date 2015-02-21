@@ -21,7 +21,7 @@
 		<p>Ja Wojtek razem z moją super żoną Sylwią pragniemy Wam serdecznie oznajmić...</p>
 	</section>
 
-	<section id="groszek_prev" class="groszek--preview" data-range="50"></section>
+	<section id="groszek_prev" class="groszek--preview" data-range="10" data-step="%"></section>
 
 	<section class="content--small">
 		<p>... że na 10-tą rocznicę naszej znajomości zmajstrowaliśmy małe co nieco.</p>
@@ -33,7 +33,7 @@
 		<p></p>
 	</section>
 
-	<section class="groszek" style="background-image: url(/images/groszek00.jpg)">
+	<section class="groszek" style="background-image: url(/images/groszek00.jpg)" data-range="100">
 		<h2 class="right">17 Tydzień</h2>
 	</section>
 	<section class="groszek" style="background-image: url(/images/groszek01.jpg)">
@@ -71,16 +71,26 @@
 
 <script type="text/javascript">
 	var groszek = createSectionHandler(window.document.getElementById('groszek_prev'));
+	var weeks = window.document.getElementsByClassName('groszek');
+	var i, weeks_handlers = [];
+
+	for (i = 0; i < weeks.length; i++) {
+		weeks_handlers[i] = createSectionHandler(weeks[i]);
+	}
 	groszek(window.pageXOffset, window.pageYOffset);
 
 	window.onscroll = function (oEvent) {
 		groszek(window.pageXOffset, window.pageYOffset);
+		for (i = 0; i < weeks_handlers.length; i++) {
+			weeks_handlers[i](window.pageXOffset, window.pageYOffset);
+		}
 	}
 
 	function createSectionHandler(el) {
 		var options = {
 			range: el.getAttribute('data-range') || 100,
 			begin: el.getAttribute('data-begin') || null,
+			step: el.getAttribute('data-step') || 'vh',
 		};
 
 		if (null === options.begin) {
@@ -100,16 +110,14 @@
 		var end = totalHeight + visibilityYEdge + elSize.height;
 
 		return function(pageXOffset, pageYOffset) {
-
 			if (visibilityYEdge > pageYOffset || end < pageYOffset) {
 				return;
 			}
-			console.log(el.getAttribute('id') ,visibilityYEdge, pageYOffset, end)
 
 			var b = (elPos.y + elSize.height - pageYOffset)
 			var p = (options.begin + (options.range * (totalHeight - b) / totalHeight));
 
-			el.style.backgroundPosition = '50% ' + p+'%';
+			el.style.backgroundPosition = '50% ' + p + options.step;
 		};
 	}
 
