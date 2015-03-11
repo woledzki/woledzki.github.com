@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:php="http://php.net/xsl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Wojtek Oledzki</title>
+<meta name="keywords" content="Wojtek Olędzki, Blog, Przepisy">
+<meta name="description" content="">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="all" href="/static/styles/css/groszek.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+	<header>
+		<section class="content--small">
+			<h1>My Dear Friends</h1>
+		</section>
+	</header>
+
+	<section class="content--small">
+		<p>Together with my wife we want to share a little secret with you...</p>
+	</section>
+
+	<section id="groszek_prev" class="groszek--preview" data-range="10" data-step="%"></section>
+
+	<section class="content--small">
+		<h2>Here's The Bump</h2>
+		<p></p>
+	</section>
+
+	<section class="groszek" style="background-image: url(/images/groszek00.jpg)">
+		<h2 class="right">16<sup>th</sup> Week</h2>
+	</section>
+	<section class="groszek" style="background-image: url(/images/groszek01.jpg)">
+		<h2>17<sup>th</sup> Week</h2>
+	</section>
+	<section class="groszek" style="background-image: url(/images/groszek02.jpg)">
+		<h2 class="right">18<sup>th</sup> Week</h2>
+	</section>
+	<section class="groszek" style="background-image: url(/images/groszek03.jpg)">
+		<h2>19<sup>th</sup> Week</h2>
+	</section>
+
+	<section class="content--small">
+		<p>
+			Cheers,
+		<p>
+		<p>Sylwia i Wojtek</p>
+	</section>
+</div>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(["_setAccount", "UA-37323022-1"]);
+	_gaq.push(["_setSiteSpeedSampleRate", 100]); // #protip
+
+	_gaq.push(["_trackPageview"]);
+
+	(function() {
+		var ga = document.createElement("script"); ga.type = "text/javascript";
+		ga.async = true;
+		ga.src = ("https:" == document.location.protocol ?
+				"https://ssl" : "http://www")
+				+ ".google-analytics.com/ga.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+	var groszek = createSectionHandler(window.document.getElementById('groszek_prev'));
+	var weeks = window.document.getElementsByClassName('groszek');
+	var i, weeks_handlers = [];
+
+	for (i = 0; i < weeks.length; i++) {
+		weeks_handlers[i] = createSectionHandler(weeks[i]);
+	}
+	groszek(window.pageXOffset, window.pageYOffset);
+
+	window.onscroll = function (oEvent) {
+		groszek(window.pageXOffset, window.pageYOffset);
+		// for (i = 0; i < weeks_handlers.length; i++) {
+		// 	weeks_handlers[i](window.pageXOffset, window.pageYOffset);
+		// }
+	}
+
+	function createSectionHandler(el) {
+		var options = {
+			range: el.getAttribute('data-range') || 100,
+			begin: el.getAttribute('data-begin') || null,
+			step: el.getAttribute('data-step') || 'vh',
+		};
+
+		if (null === options.begin) {
+			options.begin = (100 - options.range) / 2;
+		}
+
+		var elPos = getPos(el);
+		var totalHeight = window.innerHeight;
+		var visibilityYEdge = elPos.y - totalHeight;
+		var elSize = {
+			width: el.clientWidth,
+			height: el.clientHeight,
+			aspect: el.clientWidth/el.clientHeight,
+		};
+
+		var a = (totalHeight - elSize.height);
+		var end = totalHeight + visibilityYEdge + elSize.height;
+
+		return function(pageXOffset, pageYOffset) {
+			if (visibilityYEdge > pageYOffset || end < pageYOffset) {
+				return;
+			}
+
+			var b = (elPos.y + elSize.height - pageYOffset)
+			var p = (options.begin + (options.range * (totalHeight - b) / totalHeight));
+
+			el.style.backgroundPosition = '50% ' + p + options.step;
+		};
+	}
+
+	function getPos(el) {
+		// yay readability
+		for (var lx=0, ly=0;
+			el != null;
+			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+
+		return {x: lx,y: ly};
+	}
+</script>
+</body>
+</html>
