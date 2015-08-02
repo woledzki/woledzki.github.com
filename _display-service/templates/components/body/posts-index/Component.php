@@ -1,6 +1,8 @@
 <?php
 use Hoborg\Bundle\DisplayServiceBundle\Component\Component;
 
+date_default_timezone_set('UTC');
+
 class PostsIndex extends Component {
 
 	public function init() {

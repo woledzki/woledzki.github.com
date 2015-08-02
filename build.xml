@@ -1,4 +1,4 @@
-<project name="Hoborg Commons" default="help" basedir=".">
+<project name="website wojtek.it" default="help" basedir=".">
 
 	<!-- optional environmental settings -->
 	<property file="build.properties" />
@@ -6,14 +6,14 @@
 	<!-- set default values if not already set in build.properties -->
 	<property name="dir.base" location="." />
 	<property name="dir.src" location="${dir.base}/_display-service" />
-	
+
 	<property name="dir.src.public" location="${dir.src}/public" />
 	<property name="dir.out.static" location="${dir.base}/static" />
 
 	<!-- Commands aliases -->
 	<property name="cmd.lessc" value="lessc" />
-	<property name="cmd.recess" value="recess" />
-	<property name="cmd.ds-console" value="console.php" />
+	<property name="cmd.recess" value="./node_modules/.bin/recess" />
+	<property name="cmd.ds-console" value="displayService.phar" />
 
 	<target name="build"
 		description="Builds Website."
@@ -34,6 +34,8 @@
 				<include name="**/*.html" />
 				<exclude name="_display-service/**/*" />
 				<exclude name="deadline.html" />
+				<exclude name="groszek.html" />
+				<exclude name="the-bump.html" />
 			</fileset>
 		</delete>
 	</target>
@@ -48,10 +50,16 @@
 			<arg line="--compress" />
 			<arg line="${dir.src}/styles/less/main.less" />
 		</exec>
-		
+
 		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/deadline.css">
 			<arg line="--compress" />
 			<arg line="${dir.src}/styles/less/deadline.less" />
+		</exec>
+
+		<echo level="info">Building ${dir.out.static}/styles/css/groszek.css</echo>
+		<exec executable="${cmd.recess}" output="${dir.out.static}/styles/css/groszek.css">
+			<arg line="--compress" />
+			<arg line="${dir.src}/styles/less/groszek.less" />
 		</exec>
 	</target>
 
@@ -103,6 +111,10 @@
 	</target>
 
 	<target name="build.html">
+		<mkdir dir="${dir.base}/pl/posts/2012" />
+		<mkdir dir="${dir.base}/pl/posts/2013" />
+		<mkdir dir="${dir.base}/pl/posts/2014" />
+
 		<exec executable="php">
 			<env key="DS_HOSTDIR" value="${dir.src}" />
 			<arg line="${cmd.ds-console}" />

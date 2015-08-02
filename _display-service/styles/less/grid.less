@@ -45,7 +45,7 @@ body {
 	margin-right: @gutter
 }
 
- 
+
 /**
  * Set the spacing between your grid items.
  */
@@ -72,12 +72,13 @@ body {
 	// box-shadow: 1px 1px 6px #555;
 	background-color: #E3E3E3;
 	height: 190px;
-	overflow: hidden; // fix 
+	overflow: hidden; // fix
 	-webkit-transition: 0.3s;
 	   -moz-transition: 0.3s;
 	        transition: 0.3s;
 	background-position: 50% 0px;
 	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 }
 .tile-frame:hover {
@@ -195,6 +196,7 @@ aside {
 	aside .media-object {
 		float: none;
 		margin: 0 0 20px 0;
+		width: @sideWidth - 10;
 	}
 }
 
@@ -205,7 +207,7 @@ aside {
  */
 @w1: 2 * (@sideWidth + 2 * (@sidePadding + @gutter)) + @bodyWidth - 1;
 @media (max-width: @w1) {
-	
+
 	.grid-body {
 		float: right;
 		margin-right: @sideWidth + 2 * @sidePadding + @gutter;
@@ -223,7 +225,7 @@ aside {
 */
 @w2: @sideWidth + 2 * (@sidePadding + @gutter) + @bodyWidth - 1;
 @media (max-width: @w2) {
-	
+
 	.grid-body {
 		float: none;
 		margin: auto;
@@ -246,12 +248,12 @@ aside {
 			margin: auto;
 		}
 }
- 
+
 /**
  * desk
  */
 @media (max-width: @bodyWidth) {
-	
+
 	.grid-body {
 		float: none;
 		margin: auto;

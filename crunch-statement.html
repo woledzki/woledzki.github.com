@@ -1,0 +1,67 @@
+<html>
+
+<body>
+	<div>
+		<div id="drop_zone">Drop files here</div>
+		<output id="list"></output>
+
+		<a class="button button--generate">Generate</a>
+		<a class="button button--download">Download</a>
+	</div>
+	<script>
+		var downloadLink = document.getElementByClassName('button--download')[0];
+		var dropZone = document.getElementById('drop_zone');
+		var csvFiles = []
+
+		downloadLink.target = '_blank';
+		downloadLink.download = 'crunch-statement.csv';
+
+		dropZone.addEventListener('dragover', handleDragOver, false);
+		dropZone.addEventListener('drop', handleFileSelect, false);
+
+		function generateCSV(csvRows) {
+			var csvString = csvRows.join("%0A");
+			downloadLink.href = 'data:attachment/csv,' + csvString;
+		}
+
+		function handleFileSelect(e) {
+			var files = e.dataTransfer.files;
+
+			e.stopPropagation();
+			e.preventDefault();
+
+			// files is a FileList of File objects. List some properties.
+			var output = [];
+			for (var i = 0, f; f = files[i]; i++) {
+				console.log(f.type);
+
+				var reader = new FileReader();
+
+				reader.onload = (function(theFile) {
+					return function(e) {
+						// Render thumbnail.
+						var span = document.createElement('span');
+						span.innerHTML = ['<img class="thumb" src="', e.target.result,
+					                '" title="', escape(theFile.name), '"/>'].join('');
+					document.getElementById('list').insertBefore(span, null);
+					};
+				})(f);
+
+				// Read in the image file as a data URL.
+				reader.readAsDataURL(f);
+
+				csvFiles.push({
+					name: f.name,
+					size: f.size,
+				});
+			}
+		}
+
+		function handleDragOver(evt) {
+			evt.stopPropagation();
+			evt.preventDefault();
+			evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+		}
+	</script>
+</body>
+</html>

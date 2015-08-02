@@ -3,7 +3,7 @@
 	<data>
 		<extension name="data-page" />
 	</data>
-	
+
 	<component id="4" name="content" parent-id="3">
 		<data>
 			<extension name="data-content" />
@@ -11,13 +11,13 @@
 		</data>
 		<extension name="body" />
 	</component>
-	
+
 		<component name="side">
 			<component name="paragraph">
 				<data>
 					<text><![CDATA[
 <div class="media">
-<img class="pull-right media-object img-polaroid" src="/images/wojtek.jpg" width="80" />
+<img class="media-object img-polaroid" src="/images/wojtek.jpg" width="80" />
 <p class="media-body">
 	Hi, I'm Wojtek. I'm a <b>performance software engineer</b> at BSkyB.
 	I like good food, music and photography.

@@ -2,69 +2,69 @@
 
 	<!-- LAYOUTS -->
 	<component name="page"
-		template="default.xsl"
+		template="default"
 		folder="layouts/page"
 	/>
 	<component name="include"
-		template="default.xsl"
+		template="default"
 		folder="layouts/include"
 	/>
 
 	<!-- GRID -->
 	<component name="header"
-		template="default.xsl"
+		template="default"
 		folder="components/grid/header"
 	/>
 	<component name="body"
-		template="default.xsl"
+		template="default"
 		folder="components/grid/body"
 	/>
 	<component name="footer"
-		template="default.xsl"
+		template="default"
 		folder="components/grid/footer"
 	/>
 
 	<!-- Overtake -->
 	<component name="language-picker"
-		template="default.xsl"
+		template="default"
 		folder="components/body/language-picker"
 	/>
 
 	<!-- BODY -->
 	<component name="content"
-		template="default.xsl"
+		template="default"
 		folder="components/body/content"
 	/>
 	<component name="side"
-		template="default.xsl"
+		template="default"
 		folder="components/body/side"
 	/>
 
 	<component name="tile"
-		template="default.xsl"
+		template="default"
 		folder="components/body/tile"
 	/>
 	<component name="tile-post"
-		template="default.xsl"
+		template="default"
 		folder="components/body/tile-post"
 	/>
 	<component name="posts-index"
-		template="default.xsl"
+		template="default"
 		folder="components/body/posts-index"
 	/>
 
 	<component name="paragraph"
-		template="default.xsl"
-		folder="components/body/paragraph" 
+		template="default"
+		folder="components/body/paragraph"
 	/>
 
 	<component name="google-analytics"
-		template="default.xsl"
+		template="default"
 		folder="components/google/analytics"
 	/>
 
 	<component name="facebook-comments"
-		template="default.xsl"
+		template="default"
 		folder="components/facebook/comments"
 	/>
 

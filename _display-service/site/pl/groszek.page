@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<component file="includes/page-pl.page" parent-id="0">
+	<data extension="data-page">
+		<title><![CDATA[Groszek]]></title>
+		<keywords>Wojtek Olędzki</keywords>
+		<description>Groszek</description>
+	</data>
+	<data extension="data-body">
+		<slug href="/pl">Home</slug>
+		<slug>Groszek</slug>
+	</data>
+
+	<component extension="body" id="5" name="paragraph" parent-id="4">
+		<data>
+			<markdown><![CDATA[
+## Moi Drodzy
+
+Ja Wojtek razem z moją super żoną Sylwią pragniemy Wam serdecznie oznajmić...
+
+... że na 10-tą rocznicę naszej znajomości zmajstrowaliśmy małe co nieco.
+
+#### 16 Tydzień
+<img class="img-polaroid" width="590" src="/images/groszek00.jpg" />
+
+#### 17 Tydzień
+<img class="img-polaroid" width="590" src="/images/groszek01.jpg" />
+
+#### 18 Tydzień
+<img class="img-polaroid" width="590" src="/images/groszek02.jpg" />
+
+#### 19 Tydzień
+<img class="img-polaroid" width="590" src="/images/groszek03.jpg" />
+			]]></markdown>
+		</data>
+	</component>
+</component>
